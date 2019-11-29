@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git Rebase | 张不坏的博客</title>
+    <meta name="description" content="Just For Fun">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.37bfab3d.css" as="style"><link rel="preload" href="/assets/js/app.50bca889.js" as="script"><link rel="preload" href="/assets/js/5.081d1701.js" as="script"><link rel="preload" href="/assets/js/70.be8269cf.js" as="script"><link rel="preload" href="/assets/js/4.a7413ce2.js" as="script"><link rel="prefetch" href="/assets/js/10.7bb33f06.js"><link rel="prefetch" href="/assets/js/100.014ff06c.js"><link rel="prefetch" href="/assets/js/101.28f11de0.js"><link rel="prefetch" href="/assets/js/102.be9d2e87.js"><link rel="prefetch" href="/assets/js/103.a1210d81.js"><link rel="prefetch" href="/assets/js/104.7101a956.js"><link rel="prefetch" href="/assets/js/105.833e6f80.js"><link rel="prefetch" href="/assets/js/106.978e1fc0.js"><link rel="prefetch" href="/assets/js/107.5af47fd0.js"><link rel="prefetch" href="/assets/js/108.efc3ce89.js"><link rel="prefetch" href="/assets/js/109.a69d6b5a.js"><link rel="prefetch" href="/assets/js/11.2de4afc9.js"><link rel="prefetch" href="/assets/js/110.30984b63.js"><link rel="prefetch" href="/assets/js/12.bfc099bd.js"><link rel="prefetch" href="/assets/js/13.20253e0d.js"><link rel="prefetch" href="/assets/js/14.67131b1c.js"><link rel="prefetch" href="/assets/js/15.1af26cbd.js"><link rel="prefetch" href="/assets/js/16.4b261ee0.js"><link rel="prefetch" href="/assets/js/17.1216332f.js"><link rel="prefetch" href="/assets/js/18.c0159773.js"><link rel="prefetch" href="/assets/js/19.0f007f87.js"><link rel="prefetch" href="/assets/js/2.b4633a05.js"><link rel="prefetch" href="/assets/js/20.4b295001.js"><link rel="prefetch" href="/assets/js/21.0c46767c.js"><link rel="prefetch" href="/assets/js/22.a5e065ea.js"><link rel="prefetch" href="/assets/js/23.f43a6a7e.js"><link rel="prefetch" href="/assets/js/24.245f4f15.js"><link rel="prefetch" href="/assets/js/25.618f74a1.js"><link rel="prefetch" href="/assets/js/26.274a606b.js"><link rel="prefetch" href="/assets/js/27.c2d8fe18.js"><link rel="prefetch" href="/assets/js/28.5c522d2a.js"><link rel="prefetch" href="/assets/js/29.c90fdb1a.js"><link rel="prefetch" href="/assets/js/3.9babd8f1.js"><link rel="prefetch" href="/assets/js/30.1ccbdebc.js"><link rel="prefetch" href="/assets/js/31.acf3eca6.js"><link rel="prefetch" href="/assets/js/32.ccfdc859.js"><link rel="prefetch" href="/assets/js/33.9b262756.js"><link rel="prefetch" href="/assets/js/34.c59a4044.js"><link rel="prefetch" href="/assets/js/35.2b10fefb.js"><link rel="prefetch" href="/assets/js/36.2daeeb7b.js"><link rel="prefetch" href="/assets/js/37.d649866c.js"><link rel="prefetch" href="/assets/js/38.aba1ac95.js"><link rel="prefetch" href="/assets/js/39.58a95fd1.js"><link rel="prefetch" href="/assets/js/40.8ef4d374.js"><link rel="prefetch" href="/assets/js/41.5799de7a.js"><link rel="prefetch" href="/assets/js/42.b7ee7489.js"><link rel="prefetch" href="/assets/js/43.28a65d64.js"><link rel="prefetch" href="/assets/js/44.90f92ea2.js"><link rel="prefetch" href="/assets/js/45.30b683fd.js"><link rel="prefetch" href="/assets/js/46.f57ccc19.js"><link rel="prefetch" href="/assets/js/47.7a82bd74.js"><link rel="prefetch" href="/assets/js/48.72503020.js"><link rel="prefetch" href="/assets/js/49.3a4ba077.js"><link rel="prefetch" href="/assets/js/50.0c3297f3.js"><link rel="prefetch" href="/assets/js/51.e9ba9363.js"><link rel="prefetch" href="/assets/js/52.473ee9ff.js"><link rel="prefetch" href="/assets/js/53.166d6e7a.js"><link rel="prefetch" href="/assets/js/54.78af3662.js"><link rel="prefetch" href="/assets/js/55.f0d54751.js"><link rel="prefetch" href="/assets/js/56.5de81531.js"><link rel="prefetch" href="/assets/js/57.6e18322f.js"><link rel="prefetch" href="/assets/js/58.1fccc879.js"><link rel="prefetch" href="/assets/js/59.773775e1.js"><link rel="prefetch" href="/assets/js/6.0c9cc532.js"><link rel="prefetch" href="/assets/js/60.0d665185.js"><link rel="prefetch" href="/assets/js/61.d9ae36dc.js"><link rel="prefetch" href="/assets/js/62.fb5e3b65.js"><link rel="prefetch" href="/assets/js/63.5ace8fda.js"><link rel="prefetch" href="/assets/js/64.d44fb0af.js"><link rel="prefetch" href="/assets/js/65.ed8fe56f.js"><link rel="prefetch" href="/assets/js/66.809078da.js"><link rel="prefetch" href="/assets/js/67.2489499e.js"><link rel="prefetch" href="/assets/js/68.e3ee952d.js"><link rel="prefetch" href="/assets/js/69.071411f8.js"><link rel="prefetch" href="/assets/js/7.8188415c.js"><link rel="prefetch" href="/assets/js/71.a320347a.js"><link rel="prefetch" href="/assets/js/72.f4fda48b.js"><link rel="prefetch" href="/assets/js/73.0f9f9284.js"><link rel="prefetch" href="/assets/js/74.b4028d07.js"><link rel="prefetch" href="/assets/js/75.6d63415f.js"><link rel="prefetch" href="/assets/js/76.d5b4df24.js"><link rel="prefetch" href="/assets/js/77.62b794e1.js"><link rel="prefetch" href="/assets/js/78.63e767ab.js"><link rel="prefetch" href="/assets/js/79.45056905.js"><link rel="prefetch" href="/assets/js/8.20d7cb0f.js"><link rel="prefetch" href="/assets/js/80.e06c5521.js"><link rel="prefetch" href="/assets/js/81.bc82bd01.js"><link rel="prefetch" href="/assets/js/82.4aeb6081.js"><link rel="prefetch" href="/assets/js/83.3ed6146f.js"><link rel="prefetch" href="/assets/js/84.f2aff9f4.js"><link rel="prefetch" href="/assets/js/85.2b8f4e50.js"><link rel="prefetch" href="/assets/js/86.27aea1da.js"><link rel="prefetch" href="/assets/js/87.7f5dc71e.js"><link rel="prefetch" href="/assets/js/88.9ca6511c.js"><link rel="prefetch" href="/assets/js/89.e8f54ad1.js"><link rel="prefetch" href="/assets/js/9.ee6c43f7.js"><link rel="prefetch" href="/assets/js/90.9abac718.js"><link rel="prefetch" href="/assets/js/91.9d8f5f36.js"><link rel="prefetch" href="/assets/js/92.2277b907.js"><link rel="prefetch" href="/assets/js/93.efca2f57.js"><link rel="prefetch" href="/assets/js/94.e9cc0386.js"><link rel="prefetch" href="/assets/js/95.fa3326f7.js"><link rel="prefetch" href="/assets/js/96.82bafc57.js"><link rel="prefetch" href="/assets/js/97.da22d13e.js"><link rel="prefetch" href="/assets/js/98.d745e5ec.js"><link rel="prefetch" href="/assets/js/99.79a6f693.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37bfab3d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div class="navbar"><div class="navbar-content"><div class="slogan">Valar Morghulis</div> <div class="links"><span class="link-item"><a href="/">首页</a></span> <span class="link-item"><a href="/category/iOS/">iOS</a></span> <span class="link-item"><a href="/category/other/">其他</a></span></div></div></div> <div class="content-header"><div class="post-title">Git Rebase</div> <div class="post-info">2016-09-10</div></div> <div class="content content__default"><p>Git 是目前最好的版本管理工具，初入职场狠狠学习了一番，做了不少笔记，其中关于 git rebase 的笔记在公司内部被点赞最多，于是搬到博客。</p> <p>Rebase，中文世界里常被称为「变基」，即<strong>改变基础</strong>。</p> <h2 id="改变基础-–-git-rebase"><a href="#改变基础-–-git-rebase" class="header-anchor">#</a> 改变基础 – git rebase</h2> <p>什么叫基础呢？除了第一条默认分支 master 以外，其他分支都是在别的分支的某个 commit 之上发展而来的，如下图：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-1@2x.png" srcset="/image/rebase-1@2x.png 2x" data-v-339c7bd5></div> <p>图中，分支 experiment 是在 master 分支的 commit C2 的基础上发展而来的，故而认为 C2 的 experiment 分支的 base。</p> <p>通过<code>git rebase</code>命令可以改变分支的 base，动手体验一下。
+首先，按照上图创建了 git 工程，commit 和 branch 信息如下（通过 SourceTree 查看，使用<code>git log --graph --decorate</code>也可以看到类似效果）：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-2@2x.png" srcset="/image/rebase-2@2x.png 2x" data-v-339c7bd5></div> <p>现在执行rebase操作：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">git</span> checkout experiment
+<span class="token function">git</span> rebase master
+</code></pre></div><p>新的 commit 和 branch 信息如下：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-3@2x.png" srcset="/image/rebase-3@2x.png 2x" data-v-339c7bd5></div> <p>显然，分支 experiment 的 base 变成了 C3：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-4@2x.png" srcset="/image/rebase-4@2x.png 2x" data-v-339c7bd5></div> <p>可以看到：分支 experiment 中的 commits 都是新的，原来的 commits 都没了。</p> <p>rebase 和 merge 操作非常类似，<a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing" target="_blank" rel="noopener noreferrer">Rebasing<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>里有详细说明。</p> <p><code>git rebase</code>的基本使用姿势有两种<code>git rebase &lt;branch&gt;</code>和<code>git rebase &lt;SHA-1&gt;</code>。分支名<code>&lt;branch&gt;</code>说到底是指向某个 commit 的指针，<code>git rebase &lt;branch&gt;</code>将当前分支的 base 重设为<code>&lt;branch&gt;</code>所指向的 commit；<code>git rebase &lt;SHA-1&gt;</code>更直接一些，<code>&lt;SHA-1&gt;</code>指的是目标 commit 的 id。</p> <p>演示一下<code>git rebase &lt;SHA-1&gt;</code>的使用示例：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-5@2x.png" srcset="/image/rebase-5@2x.png 2x" data-v-339c7bd5></div> <p>在上图的基础上执行<code>git rebase 32aafcb</code>（32aafcb 是 C3 的 SHA-1 标识符），得到的结果如下：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-6@2x.png" srcset="/image/rebase-6@2x.png 2x" data-v-339c7bd5></div> <p>可以看到，分支 experiment 的 base 由 C2 变成了 C3。</p> <p>延伸问题：什么情景下，使用 rebase 而不是 merge？</p> <h2 id="重写历史-–-git-rebase-i"><a href="#重写历史-–-git-rebase-i" class="header-anchor">#</a> 重写历史 – git rebase -i</h2> <p>加上<code>-i</code>参数可以在 rebase 过程中对某些 commit 进行编辑，这里的参数<code>-i</code>表示的是 interactive，换句话说，这是个交互式的命令。</p> <p>常会使用到<code>git rebase -i &lt;SHA-1&gt;</code>进行 commit 操作，包括删除 commit、合并 commit。</p> <h3 id="删除-commit"><a href="#删除-commit" class="header-anchor">#</a> 删除 commit</h3> <p>有时候，我们想删掉某个 commit。</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-7@2x.png" srcset="/image/rebase-7@2x.png 2x" data-v-339c7bd5></div> <p>假如想删掉 experiment 最新的 commit E3，执行<code>git rebase -i 4063139</code>，之后会进入可交互的 vim 编辑器，如下：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-8@2x.png" srcset="/image/rebase-8@2x.png 2x" data-v-339c7bd5></div> <p>可以对分支 experiment 上的每个 commit 进行精细控制：</p> <ul><li>pick 是默认操作，啥都不干；</li> <li>squash，删除分支，把更新内容合并到前一个分支，在下一步中会让重新编辑 previous commit 的 log message</li> <li>fixup，和 squash 差不多，只是不会让重新编辑 previous commit 的 log message</li> <li>drop，删除 commit</li></ul> <p>这里需要删除 E3，因此修改第三行的 pick 为 drop，得到的结果如下：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-9@2x.png" srcset="/image/rebase-9@2x.png 2x" data-v-339c7bd5></div> <p>可以看到，分支 experiment 的最后一个 commit E3 不见了。需要说明的是，由于没有修改分支 experiment 的 base，所以 experiment 上的其他 commit 并未发生变化（相应的 SHA-1 不变）。</p> <h3 id="合并-commit"><a href="#合并-commit" class="header-anchor">#</a> 合并 commit</h3> <p>现在，我想在上面的基础上合并 experiment 的 commit E1 和 commit E2，仍然执行<code>git rebase -i 4063139</code>，进入 vim 编辑器：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-10@2x.png" srcset="/image/rebase-10@2x.png 2x" data-v-339c7bd5></div> <p>修改第二行的 pick 为 squash，保存后，Git 会让重新编辑 E1 的 log message 信息：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-11@2x.png" srcset="/image/rebase-11@2x.png 2x" data-v-339c7bd5></div> <p>这里直接把原来 E2 的 log message 给注释起来，只保留 E1 的 log message，保存，得到的结果如下：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-12@2x.png" srcset="/image/rebase-12@2x.png 2x" data-v-339c7bd5></div> <p>原来 E1 内容发生了变化，因此产生被产生的新 commit 被替换，SHA-1 由 682f3dd 变为了 56f1332。
+P.S: 如果当前只有 master 分支呢？该如何删除 commit 和合并 commit 呢？一回事儿...</p> <h2 id="当-rebase-遇到冲突"><a href="#当-rebase-遇到冲突" class="header-anchor">#</a> 当 Rebase 遇到冲突</h2> <p>上文示例不存在冲突问题，相对比较简单，但实际情况没有这么完美，往往有一些冲突需要解决。</p> <p>在实际开发中，我经常会面对这么一种情景：基于 dev 分支创建一个需求分支，搞定后，提交 pr，同事 review pr 时会陆陆续续指出一些问题，针对同事的问题后续又在这个分支上提交若干个 pr，终于被认可；是时候合并到 dev 分支了，但是在此过程中，dev 分支发生了一些改变（新增了若干个 commit），导致 merge 冲突，有些冲突无法手动 merge（譬如 Xcode 的工程文件.pbxconfig，该文件记录了大量信息，根本无法手动 merged）。</p> <p>针对这种问题，比较常见的做法是，更新本地 dev 分支，然后将需求分支 rebase 到最新的 dev 分支上，此处的 rebase 过程往往会需要处理一些冲突。</p> <p>举个稍微复杂点的例子模拟 rebase 过程中的冲突问题：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 创建仓库</span>
+<span class="token function">git</span> init
+<span class="token comment"># 创建名为foo的文件，注入一行内容「created by master」</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> EOF <span class="token operator">&gt;</span> foo
+created by master
+EOF
+<span class="token comment"># master分支的第一个commit - C0</span>
+<span class="token function">git</span> <span class="token function">add</span> foo<span class="token punctuation">;</span> <span class="token function">git</span> commit -m <span class="token string">&quot;C0&quot;</span>
+<span class="token comment"># 创建一个名为experiment的分支</span>
+<span class="token function">git</span> checkout -b experiment
+ 
+<span class="token comment"># 修改foo，重新注入内容「modified by experiment, 1st」</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> EOF <span class="token operator">&gt;</span> foo
+modified by experiment, 1st
+EOF
+<span class="token comment"># experiment分支的第一个commit - E1</span>
+<span class="token function">git</span> <span class="token function">add</span> foo<span class="token punctuation">;</span> <span class="token function">git</span> commit -m <span class="token string">&quot;E1&quot;</span>
+<span class="token comment"># 修改foo，重新注入内容「modified by experiment, 2st」</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> EOF <span class="token operator">&gt;</span> foo
+modified by experiment, 2st
+EOF
+<span class="token comment"># experiment分支的第一个commit - E2</span>
+<span class="token function">git</span> <span class="token function">add</span> foo<span class="token punctuation">;</span> <span class="token function">git</span> commit -m <span class="token string">&quot;E2&quot;</span>
+ 
+<span class="token comment"># 修改foo，重新注入内容「modified by experiment, 3s」，并添加一行「appended by experiment」</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> EOF <span class="token operator">&gt;</span> foo
+modified by experiment, 3st
+appended by experiment
+EOF
+<span class="token comment"># experiment分支的第一个commit - E3</span>
+<span class="token function">git</span> <span class="token function">add</span> foo<span class="token punctuation">;</span> <span class="token function">git</span> commit -m <span class="token string">&quot;E3&quot;</span>
+ 
+<span class="token comment"># 切回master分支</span>
+<span class="token function">git</span> checkout master
+ 
+<span class="token comment"># 修改foo，重新注入内容「modified by experiment, 3s」，并添加一行「appended by experiment」</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> EOF <span class="token operator">&gt;</span> foo
+final<span class="token operator">!</span> modified by master
+EOF
+<span class="token comment"># master分支的第一个commit - C1</span>
+<span class="token function">git</span> <span class="token function">add</span> foo<span class="token punctuation">;</span> <span class="token function">git</span> commit -m <span class="token string">&quot;C1&quot;</span>
+</code></pre></div><p>创建两个分支：master 和 experiment。</p> <p>master 分支的第一个 commit C0 创建一个文本文件 foo，并注入一行文本「created by master」；第二个 commit C1 修改了第一行的文本。
+experiment 分支在 master 的 C0 的基础上创建，之后提交了 3 次 commit，第一次和第二次均只修改了第一行文本，第三个 commit 也修改了第一行文本，并且新增了第二行文本「appended by experiment」。</p> <p>下图是更形象的描述：</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-13@2x.png" srcset="/image/rebase-13@2x.png 2x" data-v-339c7bd5></div> <p>现在的目标是将 experiment 分支 rebase 到 master 的最新 commit C1 上，且 experiment 分支最终 commit 的 foo 内容为：</p> <div class="language-textile extra-class"><pre class="language-textile"><code><span class="token phrase">final! modified by master
+appended by experiment
+</span></code></pre></div><p>执行命令：</p> <div class="language-textile extra-class"><pre class="language-textile"><code><span class="token phrase">git checkout experiment
+git rebase master
+</span></code></pre></div><p>有如下警告：</p> <div class="language-textile extra-class"><pre class="language-textile"><code><span class="token phrase">First, rewinding head to replay your work on top of it...
+Applying: E1
+Using index info to reconstruct a base tree...
+M	foo
+Falling back to patching base and 3-way merge...
+Auto-merging foo
+CONFLICT (content): Merge conflict in foo
+error: Failed to merge in the changes.
+Patch failed at 0001 E1
+The copy of the patch that failed is found in: .git/rebase-apply/patch</span>
+
+<span class="token phrase">When you have resolved this problem, run &quot;git rebase --continue&quot;.
+If you prefer to skip this patch, run &quot;git rebase --skip&quot; instead.
+To check out the original branch and stop rebasing, run &quot;git rebase --abort&quot;.
+</span></code></pre></div><p>错误信息说明：合并 E1 和 C1 时产生冲突，冲突点在文件 foo 上。</p> <p>此时有 3 个选择：abort，continue、skip。</p> <ul><li>abort，顾名思义，放弃该 rebase</li> <li>continue，在此之前，用户需要手动解决 E1 和 C1 的冲突，然后<code>git rebase --continue</code>通过</li> <li>skip，略过 E1，这意味着用户愿意放弃「E1 与 C1 冲突的 patch」</li></ul> <p>我认为可以这么理解 rebase 的过程：若想将 experiment 分支 rebase 到 master 分支上，先在 master 的基础上创建一个临时分支（类似于变量，记为_experiment_），然后将 experiment 分支上的 commit 对应的 patch 逐个添加到到_experiment_的 index 上，如果完全没问题，就创建一个 commit，并移动_experiment_到该 commit 上...如果有冲突，则终止该过程，给出如上的警告信息，用户可以选择 abort；也可以选择 skip，如果是 skip，则意味着忽略掉冲突的内容，没有冲突的内容仍然保留在暂存区，但不会创建 commit，接着处理下一个 commit，直到结束；如果用户在过程中选择 continue，则意味着用户不愿放弃冲突的 commit，要想游戏继续，用户得自己手动将 conflict 给干掉。</p> <p>如下是我根据自己对 rebase 解决冲突问题的理解所写的伪代码：</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code>var _experiment_ <span class="token operator">=</span> master<span class="token punctuation">.</span><span class="token function">copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 创建一个临时分支</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>var commit in experiment<span class="token punctuation">.</span>commits<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    var noConflict <span class="token operator">=</span> YES
+    var conflictFiles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>file in commit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>file<span class="token punctuation">.</span>isOK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 将无冲突文件添加到暂存区</span>
+            _experiment_<span class="token punctuation">.</span>index<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 标记冲突</span>
+            noConflict <span class="token operator">=</span> NO
+            <span class="token comment">// 缓存冲突文件</span>
+            conflictFiles<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>noConflict<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 无冲突，创建新分支（根据commit的元信息，及暂存区的内容）</span>
+        var newCommit <span class="token operator">=</span> <span class="token function">createNewCommit</span><span class="token punctuation">(</span>commit<span class="token punctuation">,</span> _experiment_<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
+        <span class="token comment">// 添加新分支</span>
+        _experiment_<span class="token punctuation">.</span>next <span class="token operator">=</span> newCommit
+        <span class="token comment">// 移动_experiment_</span>
+        _experiment_ <span class="token operator">=</span> newCommit
+        <span class="token comment">// 清空index</span>
+        _experiment_<span class="token punctuation">.</span>index<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ... 将冲突报告给用户，等待处理</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>skip<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 放弃current commit中的冲突文件，处理下一个commit</span>
+            conflictFiles<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">continue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 用户选择continue，并且已经解决掉了conflictFiles中的文件冲突问题</span>
+            <span class="token comment">// 将无冲突文件添加到暂存区</span>
+            _experiment_<span class="token punctuation">.</span>index<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>conflictFiles<span class="token punctuation">)</span>
+            <span class="token comment">// 创建新分支（根据commit的元信息，及暂存区的内容）</span>
+            var newCommit <span class="token operator">=</span> <span class="token function">createNewCommit</span><span class="token punctuation">(</span>commit<span class="token punctuation">,</span> _experiment_<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
+            <span class="token comment">// 添加新分支</span>
+            _experiment_<span class="token punctuation">.</span>next <span class="token operator">=</span> newCommit
+            <span class="token comment">// 移动_experiment_</span>
+            _experiment_ <span class="token operator">=</span> newCommit
+            <span class="token comment">// 清空index</span>
+            _experiment_<span class="token punctuation">.</span>index<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>总之，要完成上述示例所要达到的目标，可以这样：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">git</span> rebase master
+<span class="token function">git</span> rebase --skip  <span class="token comment"># 忽略E1中的冲突文件</span>
+<span class="token function">git</span> rebase --skip  <span class="token comment"># 忽略E2中的冲突文件</span>
+</code></pre></div><p>到最后一个 commit 了，不能再 skip 了，否则最终得到的 experiment 完全和 master 一致。现在开始手动解决 foo 冲突：</p> <div class="language-textile extra-class"><pre class="language-textile"><code><span class="token phrase">&lt;&lt;&lt;&lt;&lt;&lt;&lt; 305b5e89276ff01a66760ea9c7e8d65950154b13
+final! modified by master
+=======
+modified by experiment, 3st
+appended by experiment
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; E3 
+</span></code></pre></div><p>解决结果：</p> <div class="language-textile extra-class"><pre class="language-textile"><code><span class="token phrase">final! modified by master
+appended by experiment
+</span></code></pre></div><p>然后：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">git</span> <span class="token function">add</span> *  <span class="token comment"># 不要忘了</span>
+<span class="token function">git</span> rebase --continue
+</code></pre></div><p>Game over!</p> <div class="custom-image-wrapper" data-v-339c7bd5><img src="/image/rebase-14@2x.png" srcset="/image/rebase-14@2x.png 2x" data-v-339c7bd5></div> <p><strong>本文参考</strong></p> <ul><li><a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing" target="_blank" rel="noopener noreferrer">Rebasing<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA" target="_blank" rel="noopener noreferrer">变基<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.50bca889.js" defer></script><script src="/assets/js/5.081d1701.js" defer></script><script src="/assets/js/70.be8269cf.js" defer></script><script src="/assets/js/4.a7413ce2.js" defer></script>
+  </body>
+</html>

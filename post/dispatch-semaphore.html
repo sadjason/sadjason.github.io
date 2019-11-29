@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>dispatch_semaphore | 张不坏的博客</title>
+    <meta name="description" content="Just For Fun">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.37bfab3d.css" as="style"><link rel="preload" href="/assets/js/app.50bca889.js" as="script"><link rel="preload" href="/assets/js/5.081d1701.js" as="script"><link rel="preload" href="/assets/js/60.0d665185.js" as="script"><link rel="prefetch" href="/assets/js/10.7bb33f06.js"><link rel="prefetch" href="/assets/js/100.014ff06c.js"><link rel="prefetch" href="/assets/js/101.28f11de0.js"><link rel="prefetch" href="/assets/js/102.be9d2e87.js"><link rel="prefetch" href="/assets/js/103.a1210d81.js"><link rel="prefetch" href="/assets/js/104.7101a956.js"><link rel="prefetch" href="/assets/js/105.833e6f80.js"><link rel="prefetch" href="/assets/js/106.978e1fc0.js"><link rel="prefetch" href="/assets/js/107.5af47fd0.js"><link rel="prefetch" href="/assets/js/108.efc3ce89.js"><link rel="prefetch" href="/assets/js/109.a69d6b5a.js"><link rel="prefetch" href="/assets/js/11.2de4afc9.js"><link rel="prefetch" href="/assets/js/110.30984b63.js"><link rel="prefetch" href="/assets/js/12.bfc099bd.js"><link rel="prefetch" href="/assets/js/13.20253e0d.js"><link rel="prefetch" href="/assets/js/14.67131b1c.js"><link rel="prefetch" href="/assets/js/15.1af26cbd.js"><link rel="prefetch" href="/assets/js/16.4b261ee0.js"><link rel="prefetch" href="/assets/js/17.1216332f.js"><link rel="prefetch" href="/assets/js/18.c0159773.js"><link rel="prefetch" href="/assets/js/19.0f007f87.js"><link rel="prefetch" href="/assets/js/2.b4633a05.js"><link rel="prefetch" href="/assets/js/20.4b295001.js"><link rel="prefetch" href="/assets/js/21.0c46767c.js"><link rel="prefetch" href="/assets/js/22.a5e065ea.js"><link rel="prefetch" href="/assets/js/23.f43a6a7e.js"><link rel="prefetch" href="/assets/js/24.245f4f15.js"><link rel="prefetch" href="/assets/js/25.618f74a1.js"><link rel="prefetch" href="/assets/js/26.274a606b.js"><link rel="prefetch" href="/assets/js/27.c2d8fe18.js"><link rel="prefetch" href="/assets/js/28.5c522d2a.js"><link rel="prefetch" href="/assets/js/29.c90fdb1a.js"><link rel="prefetch" href="/assets/js/3.9babd8f1.js"><link rel="prefetch" href="/assets/js/30.1ccbdebc.js"><link rel="prefetch" href="/assets/js/31.acf3eca6.js"><link rel="prefetch" href="/assets/js/32.ccfdc859.js"><link rel="prefetch" href="/assets/js/33.9b262756.js"><link rel="prefetch" href="/assets/js/34.c59a4044.js"><link rel="prefetch" href="/assets/js/35.2b10fefb.js"><link rel="prefetch" href="/assets/js/36.2daeeb7b.js"><link rel="prefetch" href="/assets/js/37.d649866c.js"><link rel="prefetch" href="/assets/js/38.aba1ac95.js"><link rel="prefetch" href="/assets/js/39.58a95fd1.js"><link rel="prefetch" href="/assets/js/4.a7413ce2.js"><link rel="prefetch" href="/assets/js/40.8ef4d374.js"><link rel="prefetch" href="/assets/js/41.5799de7a.js"><link rel="prefetch" href="/assets/js/42.b7ee7489.js"><link rel="prefetch" href="/assets/js/43.28a65d64.js"><link rel="prefetch" href="/assets/js/44.90f92ea2.js"><link rel="prefetch" href="/assets/js/45.30b683fd.js"><link rel="prefetch" href="/assets/js/46.f57ccc19.js"><link rel="prefetch" href="/assets/js/47.7a82bd74.js"><link rel="prefetch" href="/assets/js/48.72503020.js"><link rel="prefetch" href="/assets/js/49.3a4ba077.js"><link rel="prefetch" href="/assets/js/50.0c3297f3.js"><link rel="prefetch" href="/assets/js/51.e9ba9363.js"><link rel="prefetch" href="/assets/js/52.473ee9ff.js"><link rel="prefetch" href="/assets/js/53.166d6e7a.js"><link rel="prefetch" href="/assets/js/54.78af3662.js"><link rel="prefetch" href="/assets/js/55.f0d54751.js"><link rel="prefetch" href="/assets/js/56.5de81531.js"><link rel="prefetch" href="/assets/js/57.6e18322f.js"><link rel="prefetch" href="/assets/js/58.1fccc879.js"><link rel="prefetch" href="/assets/js/59.773775e1.js"><link rel="prefetch" href="/assets/js/6.0c9cc532.js"><link rel="prefetch" href="/assets/js/61.d9ae36dc.js"><link rel="prefetch" href="/assets/js/62.fb5e3b65.js"><link rel="prefetch" href="/assets/js/63.5ace8fda.js"><link rel="prefetch" href="/assets/js/64.d44fb0af.js"><link rel="prefetch" href="/assets/js/65.ed8fe56f.js"><link rel="prefetch" href="/assets/js/66.809078da.js"><link rel="prefetch" href="/assets/js/67.2489499e.js"><link rel="prefetch" href="/assets/js/68.e3ee952d.js"><link rel="prefetch" href="/assets/js/69.071411f8.js"><link rel="prefetch" href="/assets/js/7.8188415c.js"><link rel="prefetch" href="/assets/js/70.be8269cf.js"><link rel="prefetch" href="/assets/js/71.a320347a.js"><link rel="prefetch" href="/assets/js/72.f4fda48b.js"><link rel="prefetch" href="/assets/js/73.0f9f9284.js"><link rel="prefetch" href="/assets/js/74.b4028d07.js"><link rel="prefetch" href="/assets/js/75.6d63415f.js"><link rel="prefetch" href="/assets/js/76.d5b4df24.js"><link rel="prefetch" href="/assets/js/77.62b794e1.js"><link rel="prefetch" href="/assets/js/78.63e767ab.js"><link rel="prefetch" href="/assets/js/79.45056905.js"><link rel="prefetch" href="/assets/js/8.20d7cb0f.js"><link rel="prefetch" href="/assets/js/80.e06c5521.js"><link rel="prefetch" href="/assets/js/81.bc82bd01.js"><link rel="prefetch" href="/assets/js/82.4aeb6081.js"><link rel="prefetch" href="/assets/js/83.3ed6146f.js"><link rel="prefetch" href="/assets/js/84.f2aff9f4.js"><link rel="prefetch" href="/assets/js/85.2b8f4e50.js"><link rel="prefetch" href="/assets/js/86.27aea1da.js"><link rel="prefetch" href="/assets/js/87.7f5dc71e.js"><link rel="prefetch" href="/assets/js/88.9ca6511c.js"><link rel="prefetch" href="/assets/js/89.e8f54ad1.js"><link rel="prefetch" href="/assets/js/9.ee6c43f7.js"><link rel="prefetch" href="/assets/js/90.9abac718.js"><link rel="prefetch" href="/assets/js/91.9d8f5f36.js"><link rel="prefetch" href="/assets/js/92.2277b907.js"><link rel="prefetch" href="/assets/js/93.efca2f57.js"><link rel="prefetch" href="/assets/js/94.e9cc0386.js"><link rel="prefetch" href="/assets/js/95.fa3326f7.js"><link rel="prefetch" href="/assets/js/96.82bafc57.js"><link rel="prefetch" href="/assets/js/97.da22d13e.js"><link rel="prefetch" href="/assets/js/98.d745e5ec.js"><link rel="prefetch" href="/assets/js/99.79a6f693.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37bfab3d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div class="navbar"><div class="navbar-content"><div class="slogan">Valar Morghulis</div> <div class="links"><span class="link-item"><a href="/">首页</a></span> <span class="link-item"><a href="/category/iOS/">iOS</a></span> <span class="link-item"><a href="/category/other/">其他</a></span></div></div></div> <div class="content-header"><div class="post-title">dispatch_semaphore</div> <div class="post-info">2017-10-18 • iOS</div></div> <div class="content content__default"><p>除了 dispatch_sync、dispatch_queue 系列接口，日常开发中，GCD 中另一被使用得最多的系列接口恐怕是 dispatch_semaphore 了。</p> <p>信号量（semaphore）是 PV 操作的载体，基本操作有四种：初始化、等信号、给信号、清理。对应的 dispatch_semaphore 系列接口也就寥寥 3 个：</p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code>dispatch_semaphore_t <span class="token function">dispatch_semaphore_create</span><span class="token punctuation">(</span><span class="token keyword">long</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token function">dispatch_semaphore_wait</span><span class="token punctuation">(</span>dispatch_semaphore_t dsema<span class="token punctuation">,</span> dispatch_time_t timeout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token function">dispatch_semaphore_signal</span><span class="token punctuation">(</span>dispatch_semaphore_t dsema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>本文旨在对这几个接口进行简单介绍，描述我所遇到的坑，最后，罗列常见应用。</p> <p>P.S: ARC 下，semaphore 的清理工作（释放）由 GCD 在底层自动完成。</p> <h3 id="dispatch-semaphore-create"><a href="#dispatch-semaphore-create" class="header-anchor">#</a> dispatch_semaphore_create</h3> <p><code>dispatch_semaphore_create(value)</code>返回一个 semaphore（<code>dispatch_semaphore_t</code>类型），参数<code>value</code>用于初始化 semaphore.count；需要注意的是，value 的有效值不可小于 0（否则返回<code>NULL</code>），<code>count&gt;=0</code>是信号量的基本设定；另外，从接口上看，它是 long 类型，可以定义一个足够大的值。</p> <h3 id="dispatch-semaphore-wait"><a href="#dispatch-semaphore-wait" class="header-anchor">#</a> dispatch_semaphore_wait</h3> <p><code>dispatch_semaphore_wait()</code>对应信号量的 P 操作。众所周知，P 操作尝试将 semaphore.count 减 1，如果 semaphore.count 大于 0，则意味着 P 操作执行成功，可顺利执行线程之后的逻辑；否则，P 操作会阻塞当前线程，直到 semaphore.count 大于 0。</p> <p>站在 semaphore.count 的角度来看，<code>dispatch_semaphore_wait()</code>结果有两种：</p> <ul><li>P 操作成功，即对 semaphore.count 成功减 1，返回值为 0</li> <li>P 操作失败，即对 semaphore.count 没有任何影响，返回值为非 0</li></ul> <p>什么情况会导致 P 操作失败呢？GCD 提供的<code>dispatch_semaphore_wait()</code>接口在 P 操作基础上新增了 timeout，即便当前线程因为 P 操作而阻塞，timeout 后也会被唤醒，这种情况下<code>dispatch_semaphore_wait()</code>返回值为非 0 值，表示 P 操作失败。</p> <p>P.S: <em>P</em>对应荷兰语的<em>passeren</em>（通过）。</p> <h3 id="dispatch-semaphore-signal"><a href="#dispatch-semaphore-signal" class="header-anchor">#</a> dispatch_semaphore_signal</h3> <p><code>dispatch_semaphore_signal()</code>对应信号量的 V 操作。V 操作会将 semaphore.count 加 1，如果存在某个线程因为 P 操作而阻塞，则该操作会释放其中一个线程。</p> <p>和<code>dispatch_semaphore_wait()</code>不同，<code>dispatch_semaphore_signal()</code>不存在失败的情况，但从 semaphore.count 的角度来看，也有两种情况：</p> <ul><li>不存在因为 P 操作而阻塞的线程，直接返回 0，semaphore.count 增加了 1</li> <li>存在因为 P 操作而阻塞的线程，唤醒该线程，然后返回非 0 值</li></ul> <p>如何理解第二种情况？为啥返回非 0 值呢？可以这么理解：该情况同样对 semaphore.count 加 1，但是唤醒了因为 P 操作阻塞的线程，对于后者而言，是谓「P 操作成功，将 semaphore.count 减 1」，一增一减，从 semaphore.count 结果来看，并没有发生变化，所以用非 0 返回值表述更合适（在 UNIX 世界里，0 一般表示可喜的结果）。</p> <p>P.S: <em>V</em>对应荷兰语的 vrijgeven（发布）。</p> <h3 id="dispatch-semaphore-遇坑记"><a href="#dispatch-semaphore-遇坑记" class="header-anchor">#</a> dispatch_semaphore 遇坑记</h3> <p>曾经使用 dispatch_semaphore 遇到一个 crash，为了叙述方便，将逻辑简化如下：</p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token keyword">@implementation</span> ViewController <span class="token punctuation">{</span>
+    dispatch_semaphore_t _semaphore<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>viewDidLoad <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token keyword">super</span> viewDidLoad<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    _semaphore <span class="token operator">=</span> <span class="token function">dispatch_semaphore_create</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">dispatch_semaphore_wait</span><span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">.</span>semaphore<span class="token punctuation">,</span> DISPATCH_TIME_FOREVER<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@end</span>
+</code></pre></div><p>我的操作逻辑是：创建一个<code>ViewController</code>实例，push 到 navigationController，然后 pop，接着便触发了 crash，crash 调用栈的 top 操作是<code>_dispatch_semaphore_dispose</code>，看到如下有价值的提示信息：</p> <div class="language-textile extra-class"><pre class="language-textile"><code><span class="token phrase">BUG IN CLIENT OF LIBDISPATCH: Semaphore object deallocated while in use
+</span></code></pre></div><p>上述代码在逻辑非常简单，<code>viewDidLoad</code>里构建了一个初始值为 3 的 semaphore，之后的 P 操作使得 semaphore.count 减 1，似乎没啥毛病。</p> <p>如何理解这个 crash 呢？一段懵逼时间之后，查处各种资料，最终在搞清楚了原因。</p> <p>简单来说，当 semaphore 在被释放时，其值小于原来的初始值，则系统认为该资源仍然处于「in use」状态，对其进行 dispose 时就会报错...</p> <p>如何解决这个问题呢？我能想到的有两种解决方案。</p> <p><strong>方案一</strong></p> <p>使用<code>dispatch_semaphore_create()</code>创建 semaphore 时，传入 0 参数，然后使用<code>dispatch_semaphore_signal</code>将 semaphore.count 加到想要的值，即：</p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code>_semaphore <span class="token operator">=</span> <span class="token function">dispatch_semaphore_create</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">dispatch_semaphore_signal</span><span class="token punctuation">(</span>_semaphore<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>方案二</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>dealloc <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">dispatch_semaphore_signal</span><span class="token punctuation">(</span>_semaphore<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// do nothing</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">dispatch_semaphore_signal</span><span class="token punctuation">(</span>_semaphore<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如何理解方案二呢？while 语句使得所有因为<code>_semaphore</code>操作而阻塞的线程都被释放掉了；到了 for 语句这里，semaphore.count 为 1，接着 for 语句将 semaphore.count 增加到 3。ok，此后底层 dispose semaphore 时就不会有问题了。</p> <p>针对这个 case，哪种方案更好呢？我认为是第一种，更优雅，且没啥坑。事实上，第二种方案存在问题的，倘若在执行 for 语句时，其他线程对<code>_semaphore</code>上执行了 P 操作，那么最终仍然会导致 crash；当然，通过完善 dealloc 的逻辑可以规避该问题，但太丑陋了，远不如第一种方案痛快。</p> <p>关于这一点，Apple 有一段 important<a href="https://developer.apple.com/documentation/dispatch/1452955-dispatch_semaphore_create" target="_blank" rel="noopener noreferrer">说明<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>：</p> <blockquote><p>Calls to <code>dispatch_semaphore_signal</code> must be balanced with calls to <code>dispatch_semaphore_wait</code>. Attempting to dispose of a semaphore with a count lower than value causes an EXC_BAD_INSTRUCTION exception.</p></blockquote> <p>如何理解这段话呢？我的理解，问题的症结不在于<code>dispatch_semaphore_create()</code>的初始值，而在于 PV 操作的平衡；用人话说：针对某个 semaphore，用户得确保<code>dispatch_semaphore_signal()</code>次数大于等于<code>dispatch_semaphore_wait()</code>；为啥要求大于等于？<code>dispatch_semaphore_wait()</code>因为 timeout 参数的存在，并不一定会成功执行 P 操作。另外，可以得出一个结论：<code>dispatch_semaphore_signal()</code>是无害的！</p> <h3 id="使用-dispatch-semaphore-实现互斥锁"><a href="#使用-dispatch-semaphore-实现互斥锁" class="header-anchor">#</a> 使用 dispatch_semaphore 实现互斥锁</h3> <p>如下简短代码基于 dispatch_semaphore 实现了互斥锁：</p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token keyword">@interface</span> Lock <span class="token punctuation">:</span> NSObject
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lock<span class="token punctuation">;</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlock<span class="token punctuation">;</span>
+
+<span class="token keyword">@end</span>
+
+<span class="token keyword">@implementation</span> Lock <span class="token punctuation">{</span>
+    dispatch_semaphore_t _semaphore<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span>instancetype<span class="token punctuation">)</span>init <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">self</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token keyword">super</span> init<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        _semaphore <span class="token operator">=</span> <span class="token function">dispatch_semaphore_create</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">self</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lock <span class="token punctuation">{</span>
+    <span class="token function">dispatch_semaphore_wait</span><span class="token punctuation">(</span>_semaphore<span class="token punctuation">,</span> DISPATCH_TIME_FOREVER<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlock <span class="token punctuation">{</span>
+    <span class="token function">dispatch_semaphore_signal</span><span class="token punctuation">(</span>_semaphore<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@end</span>
+</code></pre></div><p>P.S: 有空使用<a href="https://github.com/ibireme/tmp/blob/master/iOSLockBenckmark/iOSLockBenckmark/ViewController.m" target="_blank" rel="noopener noreferrer">这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>的方法比较一下上述 Lock 和<code>NSLock</code>的性能。</p> <p>P.P.S: 这种基于 dispatch_semaphore 的自定义 Lock 相较于<code>NSLock</code>有一个优点，即 lock 和 unlock 操作可以分别在不同的线程进行，而后者要求对<code>NSLock</code>的所有行为都得在同一个线程进行。</p> <h3 id="使用-dispatch-semaphore-实现读写锁"><a href="#使用-dispatch-semaphore-实现读写锁" class="header-anchor">#</a> 使用 dispatch_semaphore 实现读写锁</h3> <p>所谓读写锁，简单来说，对于同一敏感资源，写操作必须互斥，读操作支持并发；更具体的概念这里就不再赘述了，详见<a href="https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock" target="_blank" rel="noopener noreferrer">维基百科<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。就功能而言，使用 dispatch_barrier 可以轻易实现。如果使用 dispatch_semaphore，又该如何实现呢？</p> <p>使用信号量实现读写锁的典型资源配比是：两个信号量+一个状态变量。</p> <p>为了简化代码，在上述基于信号量实现的<code>Lock</code>基础上实现读写锁，如下：</p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token keyword">@interface</span> ReadWriteLock <span class="token punctuation">:</span> NSObject
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lockRead<span class="token punctuation">;</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlockRead<span class="token punctuation">;</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lockWrite<span class="token punctuation">;</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlockWrite<span class="token punctuation">;</span>
+
+<span class="token keyword">@end</span>
+
+<span class="token keyword">@implementation</span> ReadWriteLock <span class="token punctuation">{</span>
+    Lock <span class="token operator">*</span>_readLock<span class="token punctuation">;</span>
+    Lock <span class="token operator">*</span>_writeLock<span class="token punctuation">;</span>
+    NSInteger _readCount<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span>instancetype<span class="token punctuation">)</span>init <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">self</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token keyword">super</span> init<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        _readLock <span class="token operator">=</span> <span class="token punctuation">[</span>Lock new<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _writeLock <span class="token operator">=</span> <span class="token punctuation">[</span>Lock new<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _readCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">self</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lockRead <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_readLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    _readCount<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_readCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>_writeLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span>_readLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlockRead <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_readLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    _readCount<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_readCount <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>_writeLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span>_readLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lockWrite <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_writeLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlockWrite <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_writeLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@end</span>
+</code></pre></div><p>就功能而言，上述实现逻辑能满足基本需求，但这段代码是有缺陷的。在大多数需要读写锁的需求中，读操作的频次要远高于写操作，这种场景下，可能会造成的问题是：<code>ReadWriteLock#lockWrite</code>长期处于 block 状态，俗称「写饥饿」。</p> <p>问题的关键在于<code>ReadWriteLock#lockRead</code>无法感知 writeLock 的状态，除了在<code>if (_readCount == 1)</code>语句中锁住 writeLock，其他情况下读操作都无视 writeLock 的存在，因此，解决问题的关键在于提升写操作的地位，这可以通过添加一个优先级锁来解决，如下：</p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token keyword">@implementation</span> ReadWriteLock <span class="token punctuation">{</span>
+    Lock <span class="token operator">*</span>_readLock<span class="token punctuation">;</span>
+    Lock <span class="token operator">*</span>_writeLock<span class="token punctuation">;</span>
+    Lock <span class="token operator">*</span>_priorityLock<span class="token punctuation">;</span>
+    NSInteger _readCount<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span>instancetype<span class="token punctuation">)</span>init <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">self</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token keyword">super</span> init<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        _readLock <span class="token operator">=</span> <span class="token punctuation">[</span>Lock new<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _writeLock <span class="token operator">=</span> <span class="token punctuation">[</span>Lock new<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _priorityLock<span class="token operator">=</span> <span class="token punctuation">[</span>Lock new<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        _readCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">self</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lockRead <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_priorityLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">[</span>_readLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    _readCount<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_readCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>_writeLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span>_readLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">[</span>_priorityLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlockRead <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_readLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    _readCount<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_readCount <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>_writeLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span>_readLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>lockWrite <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_priorityLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">[</span>_writeLock lock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>unlockWrite <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span>_writeLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">[</span>_priorityLock unlock<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@end</span>
+</code></pre></div><p>新增的 priorityLock 起到什么作用呢？它用于记录 writeLock 的状态，即只要有写操作存在时，就会锁住 priorityLock；此时，<code>ReadWriteLock#lockRead</code>逻辑的开始就会被 block 住。从效果来看，writeLock 的地位高于 readLock，即写操作优先。</p></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.50bca889.js" defer></script><script src="/assets/js/5.081d1701.js" defer></script><script src="/assets/js/60.0d665185.js" defer></script>
+  </body>
+</html>
