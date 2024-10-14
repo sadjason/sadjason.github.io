@@ -10,7 +10,3824 @@
     <div style="text-align: center;">上证50</div>
     <div id="chart"></div>
     <script>
-        var list = [{'date': '2009-01-09', 'close': '1447', 'degree': ''}, {'date': '2009-01-16', 'close': '1502', 'degree': ''}, {'date': '2009-01-23', 'close': '1538', 'degree': ''}, {'date': '2009-02-06', 'close': '1689', 'degree': ''}, {'date': '2009-02-13', 'close': '1755', 'degree': ''}, {'date': '2009-02-20', 'close': '1695', 'degree': ''}, {'date': '2009-02-27', 'close': '1592', 'degree': ''}, {'date': '2009-03-06', 'close': '1676', 'degree': ''}, {'date': '2009-03-13', 'close': '1626', 'degree': ''}, {'date': '2009-03-20', 'close': '1726', 'degree': ''}, {'date': '2009-03-27', 'close': '1825', 'degree': ''}, {'date': '2009-04-03', 'close': '1892', 'degree': ''}, {'date': '2009-04-10', 'close': '1895', 'degree': ''}, {'date': '2009-04-17', 'close': '1920', 'degree': ''}, {'date': '2009-04-24', 'close': '1860', 'degree': ''}, {'date': '2009-05-08', 'close': '2022', 'degree': ''}, {'date': '2009-05-15', 'close': '2022', 'degree': ''}, {'date': '2009-05-22', 'close': '1967', 'degree': ''}, {'date': '2009-06-05', 'close': '2160', 'degree': ''}, {'date': '2009-06-12', 'close': '2156', 'degree': ''}, {'date': '2009-06-19', 'close': '2309', 'degree': ''}, {'date': '2009-06-26', 'close': '2344', 'degree': ''}, {'date': '2009-07-03', 'close': '2508', 'degree': ''}, {'date': '2009-07-10', 'close': '2519', 'degree': ''}, {'date': '2009-07-17', 'close': '2604', 'degree': ''}, {'date': '2009-07-24', 'close': '2743', 'degree': ''}, {'date': '2009-07-31', 'close': '2816', 'degree': ''}, {'date': '2009-08-07', 'close': '2634', 'degree': ''}, {'date': '2009-08-14', 'close': '2463', 'degree': ''}, {'date': '2009-08-21', 'close': '2367', 'degree': ''}, {'date': '2009-08-28', 'close': '2193', 'degree': ''}, {'date': '2009-09-04', 'close': '2237', 'degree': ''}, {'date': '2009-09-11', 'close': '2356', 'degree': ''}, {'date': '2009-09-18', 'close': '2296', 'degree': ''}, {'date': '2009-09-25', 'close': '2226', 'degree': ''}, {'date': '2009-10-09', 'close': '2308', 'degree': ''}, {'date': '2009-10-16', 'close': '2358', 'degree': ''}, {'date': '2009-10-23', 'close': '2481', 'degree': ''}, {'date': '2009-10-30', 'close': '2376', 'degree': ''}, {'date': '2009-11-06', 'close': '2512', 'degree': ''}, {'date': '2009-11-13', 'close': '2523', 'degree': ''}, {'date': '2009-11-20', 'close': '2583', 'degree': ''}, {'date': '2009-11-27', 'close': '2388', 'degree': ''}, {'date': '2009-12-04', 'close': '2587', 'degree': ''}, {'date': '2009-12-11', 'close': '2507', 'degree': ''}, {'date': '2009-12-18', 'close': '2424', 'degree': ''}, {'date': '2009-12-25', 'close': '2406', 'degree': ''}, {'date': '2010-01-08', 'close': '2466', 'degree': ''}, {'date': '2010-01-15', 'close': '2427', 'degree': ''}, {'date': '2010-01-22', 'close': '2380', 'degree': ''}, {'date': '2010-01-29', 'close': '2243', 'degree': ''}, {'date': '2010-02-05', 'close': '2219', 'degree': ''}, {'date': '2010-02-12', 'close': '2284', 'degree': ''}, {'date': '2010-02-26', 'close': '2274', 'degree': ''}, {'date': '2010-03-05', 'close': '2267', 'degree': ''}, {'date': '2010-03-12', 'close': '2274', 'degree': ''}, {'date': '2010-03-19', 'close': '2310', 'degree': ''}, {'date': '2010-03-26', 'close': '2292', 'degree': ''}, {'date': '2010-04-02', 'close': '2379', 'degree': ''}, {'date': '2010-04-09', 'close': '2345', 'degree': ''}, {'date': '2010-04-16', 'close': '2329', 'degree': ''}, {'date': '2010-04-23', 'close': '2185', 'degree': ''}, {'date': '2010-04-30', 'close': '2149', 'degree': ''}, {'date': '2010-05-07', 'close': '1980', 'degree': ''}, {'date': '2010-05-14', 'close': '2019', 'degree': ''}, {'date': '2010-05-21', 'close': '1943', 'degree': ''}, {'date': '2010-05-28', 'close': '1973', 'degree': ''}, {'date': '2010-06-04', 'close': '1894', 'degree': ''}, {'date': '2010-06-11', 'close': '1883', 'degree': ''}, {'date': '2010-06-18', 'close': '1870', 'degree': ''}, {'date': '2010-06-25', 'close': '1915', 'degree': ''}, {'date': '2010-07-02', 'close': '1812', 'degree': ''}, {'date': '2010-07-09', 'close': '1870', 'degree': ''}, {'date': '2010-07-16', 'close': '1839', 'degree': ''}, {'date': '2010-07-23', 'close': '1945', 'degree': ''}, {'date': '2010-07-30', 'close': '1986', 'degree': ''}, {'date': '2010-08-06', 'close': '1979', 'degree': ''}, {'date': '2010-08-13', 'close': '1930', 'degree': ''}, {'date': '2010-08-20', 'close': '1967', 'degree': ''}, {'date': '2010-08-27', 'close': '1917', 'degree': ''}, {'date': '2010-09-03', 'close': '1929', 'degree': ''}, {'date': '2010-09-10', 'close': '1915', 'degree': ''}, {'date': '2010-09-17', 'close': '1857', 'degree': ''}, {'date': '2010-10-08', 'close': '1990', 'degree': ''}, {'date': '2010-10-15', 'close': '2254', 'degree': ''}, {'date': '2010-10-22', 'close': '2231', 'degree': ''}, {'date': '2010-10-29', 'close': '2189', 'degree': ''}, {'date': '2010-11-05', 'close': '2279', 'degree': ''}, {'date': '2010-11-12', 'close': '2130', 'degree': ''}, {'date': '2010-11-19', 'close': '2039', 'degree': ''}, {'date': '2010-11-26', 'close': '2018', 'degree': ''}, {'date': '2010-12-03', 'close': '2008', 'degree': ''}, {'date': '2010-12-10', 'close': '2021', 'degree': ''}, {'date': '2010-12-17', 'close': '2032', 'degree': ''}, {'date': '2010-12-24', 'close': '2013', 'degree': ''}, {'date': '2010-12-31', 'close': '1977', 'degree': ''}, {'date': '2011-01-07', 'close': '2006', 'degree': ''}, {'date': '2011-01-14', 'close': '1982', 'degree': ''}, {'date': '2011-01-21', 'close': '1925', 'degree': ''}, {'date': '2011-01-28', 'close': '1945', 'degree': ''}, {'date': '2011-02-11', 'close': '1976', 'degree': ''}, {'date': '2011-02-18', 'close': '2030', 'degree': ''}, {'date': '2011-02-25', 'close': '2006', 'degree': ''}, {'date': '2011-03-04', 'close': '2080', 'degree': ''}, {'date': '2011-03-11', 'close': '2049', 'degree': ''}, {'date': '2011-03-18', 'close': '2034', 'degree': ''}, {'date': '2011-03-25', 'close': '2096', 'degree': ''}, {'date': '2011-04-01', 'close': '2126', 'degree': ''}, {'date': '2011-04-08', 'close': '2185', 'degree': ''}, {'date': '2011-04-15', 'close': '2201', 'degree': ''}, {'date': '2011-04-22', 'close': '2151', 'degree': ''}, {'date': '2011-04-29', 'close': '2113', 'degree': ''}, {'date': '2011-05-06', 'close': '2037', 'degree': ''}, {'date': '2011-05-13', 'close': '2043', 'degree': ''}, {'date': '2011-05-20', 'close': '2052', 'degree': ''}, {'date': '2011-05-27', 'close': '1976', 'degree': ''}, {'date': '2011-06-03', 'close': '1974', 'degree': ''}, {'date': '2011-06-10', 'close': '1951', 'degree': ''}, {'date': '2011-06-17', 'close': '1912', 'degree': ''}, {'date': '2011-06-24', 'close': '1997', 'degree': ''}, {'date': '2011-07-01', 'close': '1986', 'degree': ''}, {'date': '2011-07-08', 'close': '2014', 'degree': ''}, {'date': '2011-07-15', 'close': '2012', 'degree': ''}, {'date': '2011-07-22', 'close': '1964', 'degree': ''}, {'date': '2011-07-29', 'close': '1908', 'degree': ''}, {'date': '2011-08-05', 'close': '1850', 'degree': ''}, {'date': '2011-08-12', 'close': '1838', 'degree': ''}, {'date': '2011-08-19', 'close': '1806', 'degree': ''}, {'date': '2011-08-26', 'close': '1876', 'degree': ''}, {'date': '2011-09-02', 'close': '1820', 'degree': ''}, {'date': '2011-09-09', 'close': '1800', 'degree': ''}, {'date': '2011-09-16', 'close': '1784', 'degree': ''}, {'date': '2011-09-23', 'close': '1740', 'degree': ''}, {'date': '2011-09-30', 'close': '1684', 'degree': ''}, {'date': '2011-10-14', 'close': '1745', 'degree': ''}, {'date': '2011-10-21', 'close': '1676', 'degree': ''}, {'date': '2011-10-28', 'close': '1807', 'degree': ''}, {'date': '2011-11-04', 'close': '1831', 'degree': ''}, {'date': '2011-11-11', 'close': '1779', 'degree': ''}, {'date': '2011-11-18', 'close': '1720', 'degree': ''}, {'date': '2011-11-25', 'close': '1691', 'degree': ''}, {'date': '2011-12-02', 'close': '1704', 'degree': ''}, {'date': '2011-12-09', 'close': '1692', 'degree': ''}, {'date': '2011-12-16', 'close': '1628', 'degree': ''}, {'date': '2011-12-23', 'close': '1617', 'degree': ''}, {'date': '2011-12-30', 'close': '1617', 'degree': ''}, {'date': '2012-01-06', 'close': '1608', 'degree': ''}, {'date': '2012-01-13', 'close': '1685', 'degree': ''}, {'date': '2012-01-20', 'close': '1775', 'degree': ''}, {'date': '2012-02-03', 'close': '1772', 'degree': ''}, {'date': '2012-02-10', 'close': '1778', 'degree': ''}, {'date': '2012-02-17', 'close': '1765', 'degree': ''}, {'date': '2012-02-24', 'close': '1826', 'degree': ''}, {'date': '2012-03-02', 'close': '1843', 'degree': ''}, {'date': '2012-03-09', 'close': '1811', 'degree': ''}, {'date': '2012-03-16', 'close': '1780', 'degree': ''}, {'date': '2012-03-23', 'close': '1747', 'degree': ''}, {'date': '2012-03-30', 'close': '1705', 'degree': ''}, {'date': '2012-04-06', 'close': '1737', 'degree': ''}, {'date': '2012-04-13', 'close': '1777', 'degree': ''}, {'date': '2012-04-20', 'close': '1815', 'degree': ''}, {'date': '2012-04-27', 'close': '1822', 'degree': ''}, {'date': '2012-05-04', 'close': '1876', 'degree': ''}, {'date': '2012-05-11', 'close': '1815', 'degree': ''}, {'date': '2012-05-18', 'close': '1775', 'degree': ''}, {'date': '2012-05-25', 'close': '1776', 'degree': ''}, {'date': '2012-06-01', 'close': '1808', 'degree': ''}, {'date': '2012-06-08', 'close': '1738', 'degree': ''}, {'date': '2012-06-15', 'close': '1769', 'degree': ''}, {'date': '2012-06-29', 'close': '1708', 'degree': ''}, {'date': '2012-07-06', 'close': '1711', 'degree': ''}, {'date': '2012-07-13', 'close': '1685', 'degree': ''}, {'date': '2012-07-20', 'close': '1658', 'degree': ''}, {'date': '2012-07-27', 'close': '1630', 'degree': ''}, {'date': '2012-08-03', 'close': '1641', 'degree': ''}, {'date': '2012-08-10', 'close': '1665', 'degree': ''}, {'date': '2012-08-17', 'close': '1606', 'degree': ''}, {'date': '2012-08-24', 'close': '1588', 'degree': ''}, {'date': '2012-08-31', 'close': '1551', 'degree': ''}, {'date': '2012-09-07', 'close': '1619', 'degree': ''}, {'date': '2012-09-14', 'close': '1614', 'degree': ''}, {'date': '2012-09-21', 'close': '1545', 'degree': ''}, {'date': '2012-09-28', 'close': '1613', 'degree': ''}, {'date': '2012-10-12', 'close': '1618', 'degree': ''}, {'date': '2012-10-19', 'close': '1637', 'degree': ''}, {'date': '2012-10-26', 'close': '1584', 'degree': ''}, {'date': '2012-11-02', 'close': '1626', 'degree': ''}, {'date': '2012-11-09', 'close': '1591', 'degree': ''}, {'date': '2012-11-16', 'close': '1551', 'degree': ''}, {'date': '2012-11-23', 'close': '1568', 'degree': ''}, {'date': '2012-11-30', 'close': '1547', 'degree': ''}, {'date': '2012-12-07', 'close': '1634', 'degree': ''}, {'date': '2012-12-14', 'close': '1728', 'degree': ''}, {'date': '2012-12-21', 'close': '1737', 'degree': ''}, {'date': '2012-12-28', 'close': '1817', 'degree': ''}, {'date': '2013-01-04', 'close': '1870', 'degree': ''}, {'date': '2013-01-11', 'close': '1818', 'degree': ''}, {'date': '2013-01-18', 'close': '1886', 'degree': ''}, {'date': '2013-01-25', 'close': '1886', 'degree': ''}, {'date': '2013-02-01', 'close': '2055', 'degree': ''}, {'date': '2013-02-08', 'close': '2042', 'degree': ''}, {'date': '2013-02-22', 'close': '1883', 'degree': ''}, {'date': '2013-03-01', 'close': '1944', 'degree': ''}, {'date': '2013-03-08', 'close': '1901', 'degree': ''}, {'date': '2013-03-15', 'close': '1841', 'degree': ''}, {'date': '2013-03-22', 'close': '1904', 'degree': ''}, {'date': '2013-03-29', 'close': '1793', 'degree': ''}, {'date': '2013-04-12', 'close': '1774', 'degree': ''}, {'date': '2013-04-19', 'close': '1827', 'degree': ''}, {'date': '2013-04-26', 'close': '1766', 'degree': ''}, {'date': '2013-05-03', 'close': '1795', 'degree': ''}, {'date': '2013-05-10', 'close': '1819', 'degree': ''}, {'date': '2013-05-17', 'close': '1843', 'degree': ''}, {'date': '2013-05-24', 'close': '1829', 'degree': ''}, {'date': '2013-05-31', 'close': '1841', 'degree': ''}, {'date': '2013-06-07', 'close': '1760', 'degree': ''}, {'date': '2013-06-14', 'close': '1704', 'degree': ''}, {'date': '2013-06-21', 'close': '1633', 'degree': ''}, {'date': '2013-06-28', 'close': '1552', 'degree': ''}, {'date': '2013-07-05', 'close': '1542', 'degree': ''}, {'date': '2013-07-12', 'close': '1587', 'degree': ''}, {'date': '2013-07-19', 'close': '1511', 'degree': ''}, {'date': '2013-07-26', 'close': '1521', 'degree': ''}, {'date': '2013-08-02', 'close': '1536', 'degree': ''}, {'date': '2013-08-09', 'close': '1553', 'degree': ''}, {'date': '2013-08-16', 'close': '1592', 'degree': ''}, {'date': '2013-08-23', 'close': '1566', 'degree': ''}, {'date': '2013-08-30', 'close': '1589', 'degree': ''}, {'date': '2013-09-06', 'close': '1625', 'degree': ''}, {'date': '2013-09-13', 'close': '1749', 'degree': ''}, {'date': '2013-09-27', 'close': '1639', 'degree': ''}, {'date': '2013-10-11', 'close': '1669', 'degree': ''}, {'date': '2013-10-18', 'close': '1636', 'degree': ''}, {'date': '2013-10-25', 'close': '1611', 'degree': ''}, {'date': '2013-11-01', 'close': '1644', 'degree': ''}, {'date': '2013-11-08', 'close': '1587', 'degree': ''}, {'date': '2013-11-15', 'close': '1604', 'degree': ''}, {'date': '2013-11-22', 'close': '1642', 'degree': ''}, {'date': '2013-11-29', 'close': '1661', 'degree': ''}, {'date': '2013-12-06', 'close': '1675', 'degree': ''}, {'date': '2013-12-13', 'close': '1626', 'degree': ''}, {'date': '2013-12-20', 'close': '1537', 'degree': ''}, {'date': '2013-12-27', 'close': '1550', 'degree': ''}, {'date': '2014-01-03', 'close': '1536', 'degree': ''}, {'date': '2014-01-10', 'close': '1498', 'degree': ''}, {'date': '2014-01-17', 'close': '1475', 'degree': ''}, {'date': '2014-01-24', 'close': '1502', 'degree': ''}, {'date': '2014-02-07', 'close': '1475', 'degree': ''}, {'date': '2014-02-14', 'close': '1534', 'degree': ''}, {'date': '2014-02-21', 'close': '1505', 'degree': ''}, {'date': '2014-02-28', 'close': '1464', 'degree': ''}, {'date': '2014-03-07', 'close': '1455', 'degree': ''}, {'date': '2014-03-14', 'close': '1426', 'degree': ''}, {'date': '2014-03-21', 'close': '1464', 'degree': ''}, {'date': '2014-03-28', 'close': '1472', 'degree': ''}, {'date': '2014-04-04', 'close': '1490', 'degree': ''}, {'date': '2014-04-11', 'close': '1565', 'degree': ''}, {'date': '2014-04-18', 'close': '1521', 'degree': ''}, {'date': '2014-04-25', 'close': '1501', 'degree': ''}, {'date': '2014-05-09', 'close': '1480', 'degree': ''}, {'date': '2014-05-16', 'close': '1487', 'degree': ''}, {'date': '2014-05-23', 'close': '1484', 'degree': ''}, {'date': '2014-05-30', 'close': '1482', 'degree': ''}, {'date': '2014-06-06', 'close': '1472', 'degree': ''}, {'date': '2014-06-13', 'close': '1502', 'degree': ''}, {'date': '2014-06-20', 'close': '1484', 'degree': ''}, {'date': '2014-06-27', 'close': '1473', 'degree': ''}, {'date': '2014-07-04', 'close': '1492', 'degree': ''}, {'date': '2014-07-11', 'close': '1468', 'degree': ''}, {'date': '2014-07-18', 'close': '1478', 'degree': ''}, {'date': '2014-07-25', 'close': '1557', 'degree': ''}, {'date': '2014-08-01', 'close': '1607', 'degree': ''}, {'date': '2014-08-08', 'close': '1595', 'degree': ''}, {'date': '2014-08-15', 'close': '1612', 'degree': ''}, {'date': '2014-08-22', 'close': '1594', 'degree': ''}, {'date': '2014-08-29', 'close': '1581', 'degree': ''}, {'date': '2014-09-05', 'close': '1656', 'degree': ''}, {'date': '2014-09-12', 'close': '1630', 'degree': ''}, {'date': '2014-09-19', 'close': '1619', 'degree': ''}, {'date': '2014-09-26', 'close': '1616', 'degree': ''}, {'date': '2014-10-10', 'close': '1621', 'degree': ''}, {'date': '2014-10-17', 'close': '1608', 'degree': ''}, {'date': '2014-10-24', 'close': '1583', 'degree': ''}, {'date': '2014-10-31', 'close': '1657', 'degree': ''}, {'date': '2014-11-07', 'close': '1640', 'degree': ''}, {'date': '2014-11-14', 'close': '1728', 'degree': ''}, {'date': '2014-11-21', 'close': '1714', 'degree': ''}, {'date': '2014-11-28', 'close': '1914', 'degree': ''}, {'date': '2014-12-05', 'close': '2200', 'degree': ''}, {'date': '2014-12-12', 'close': '2193', 'degree': ''}, {'date': '2014-12-19', 'close': '2390', 'degree': ''}, {'date': '2014-12-26', 'close': '2464', 'degree': ''}, {'date': '2015-01-09', 'close': '2569', 'degree': ''}, {'date': '2015-01-16', 'close': '2653', 'degree': ''}, {'date': '2015-01-23', 'close': '2564', 'degree': ''}, {'date': '2015-01-30', 'close': '2405', 'degree': ''}, {'date': '2015-02-06', 'close': '2325', 'degree': ''}, {'date': '2015-02-13', 'close': '2427', 'degree': ''}, {'date': '2015-02-27', 'close': '2474', 'degree': ''}, {'date': '2015-03-06', 'close': '2371', 'degree': ''}, {'date': '2015-03-13', 'close': '2495', 'degree': ''}, {'date': '2015-03-20', 'close': '2680', 'degree': ''}, {'date': '2015-03-27', 'close': '2689', 'degree': ''}, {'date': '2015-04-03', 'close': '2817', 'degree': ''}, {'date': '2015-04-10', 'close': '2986', 'degree': ''}, {'date': '2015-04-17', 'close': '3235', 'degree': ''}, {'date': '2015-04-24', 'close': '3223', 'degree': ''}, {'date': '2015-05-08', 'close': '3110', 'degree': ''}, {'date': '2015-05-15', 'close': '3060', 'degree': ''}, {'date': '2015-05-22', 'close': '3248', 'degree': ''}, {'date': '2015-05-29', 'close': '3111', 'degree': ''}, {'date': '2015-06-05', 'close': '3303', 'degree': ''}, {'date': '2015-06-12', 'close': '3350', 'degree': ''}, {'date': '2015-06-19', 'close': '2903', 'degree': ''}, {'date': '2015-06-26', 'close': '2736', 'degree': ''}, {'date': '2015-07-03', 'close': '2582', 'degree': ''}, {'date': '2015-07-10', 'close': '2898', 'degree': ''}, {'date': '2015-07-17', 'close': '2807', 'degree': ''}, {'date': '2015-07-24', 'close': '2741', 'degree': ''}, {'date': '2015-07-31', 'close': '2461', 'degree': ''}, {'date': '2015-08-07', 'close': '2503', 'degree': ''}, {'date': '2015-08-14', 'close': '2577', 'degree': ''}, {'date': '2015-08-21', 'close': '2271', 'degree': ''}, {'date': '2015-08-28', 'close': '2159', 'degree': ''}, {'date': '2015-09-11', 'close': '2195', 'degree': ''}, {'date': '2015-09-18', 'close': '2198', 'degree': ''}, {'date': '2015-09-25', 'close': '2183', 'degree': ''}, {'date': '2015-10-09', 'close': '2219', 'degree': ''}, {'date': '2015-10-16', 'close': '2323', 'degree': ''}, {'date': '2015-10-23', 'close': '2343', 'degree': ''}, {'date': '2015-10-30', 'close': '2312', 'degree': ''}, {'date': '2015-11-06', 'close': '2493', 'degree': ''}, {'date': '2015-11-13', 'close': '2447', 'degree': ''}, {'date': '2015-11-20', 'close': '2466', 'degree': ''}, {'date': '2015-11-27', 'close': '2334', 'degree': ''}, {'date': '2015-12-04', 'close': '2397', 'degree': ''}, {'date': '2015-12-11', 'close': '2342', 'degree': ''}, {'date': '2015-12-18', 'close': '2422', 'degree': ''}, {'date': '2015-12-25', 'close': '2492', 'degree': ''}, {'date': '2016-01-08', 'close': '2219', 'degree': ''}, {'date': '2016-01-15', 'close': '2070', 'degree': ''}, {'date': '2016-01-22', 'close': '2061', 'degree': ''}, {'date': '2016-01-29', 'close': '1973', 'degree': ''}, {'date': '2016-02-05', 'close': '1967', 'degree': ''}, {'date': '2016-02-19', 'close': '2004', 'degree': ''}, {'date': '2016-02-26', 'close': '1955', 'degree': ''}, {'date': '2016-03-04', 'close': '2122', 'degree': ''}, {'date': '2016-03-11', 'close': '2070', 'degree': ''}, {'date': '2016-03-18', 'close': '2141', 'degree': ''}, {'date': '2016-03-25', 'close': '2149', 'degree': ''}, {'date': '2016-04-01', 'close': '2167', 'degree': ''}, {'date': '2016-04-08', 'close': '2123', 'degree': ''}, {'date': '2016-04-15', 'close': '2182', 'degree': ''}, {'date': '2016-04-22', 'close': '2157', 'degree': ''}, {'date': '2016-04-29', 'close': '2135', 'degree': ''}, {'date': '2016-05-06', 'close': '2107', 'degree': ''}, {'date': '2016-05-13', 'close': '2076', 'degree': ''}, {'date': '2016-05-20', 'close': '2083', 'degree': ''}, {'date': '2016-05-27', 'close': '2074', 'degree': ''}, {'date': '2016-06-03', 'close': '2152', 'degree': ''}, {'date': '2016-06-17', 'close': '2102', 'degree': ''}, {'date': '2016-06-24', 'close': '2076', 'degree': ''}, {'date': '2016-07-01', 'close': '2127', 'degree': ''}, {'date': '2016-07-08', 'close': '2148', 'degree': ''}, {'date': '2016-07-15', 'close': '2192', 'degree': ''}, {'date': '2016-07-22', 'close': '2157', 'degree': ''}, {'date': '2016-07-29', 'close': '2155', 'degree': ''}, {'date': '2016-08-05', 'close': '2148', 'degree': ''}, {'date': '2016-08-12', 'close': '2222', 'degree': ''}, {'date': '2016-08-19', 'close': '2249', 'degree': ''}, {'date': '2016-08-26', 'close': '2219', 'degree': ''}, {'date': '2016-09-02', 'close': '2229', 'degree': ''}, {'date': '2016-09-09', 'close': '2229', 'degree': ''}, {'date': '2016-09-23', 'close': '2196', 'degree': ''}, {'date': '2016-09-30', 'close': '2177', 'degree': ''}, {'date': '2016-10-14', 'close': '2209', 'degree': ''}, {'date': '2016-10-21', 'close': '2240', 'degree': ''}, {'date': '2016-10-28', 'close': '2253', 'degree': ''}, {'date': '2016-11-04', 'close': '2271', 'degree': ''}, {'date': '2016-11-11', 'close': '2308', 'degree': ''}, {'date': '2016-11-18', 'close': '2307', 'degree': ''}, {'date': '2016-11-25', 'close': '2393', 'degree': ''}, {'date': '2016-12-02', 'close': '2416', 'degree': ''}, {'date': '2016-12-09', 'close': '2411', 'degree': ''}, {'date': '2016-12-16', 'close': '2302', 'degree': ''}, {'date': '2016-12-23', 'close': '2278', 'degree': ''}, {'date': '2016-12-30', 'close': '2286', 'degree': ''}, {'date': '2017-01-06', 'close': '2308', 'degree': ''}, {'date': '2017-01-13', 'close': '2308', 'degree': ''}, {'date': '2017-01-20', 'close': '2347', 'degree': ''}, {'date': '2017-02-03', 'close': '2339', 'degree': ''}, {'date': '2017-02-10', 'close': '2368', 'degree': ''}, {'date': '2017-02-17', 'close': '2362', 'degree': ''}, {'date': '2017-02-24', 'close': '2389', 'degree': ''}, {'date': '2017-03-03', 'close': '2347', 'degree': ''}, {'date': '2017-03-10', 'close': '2339', 'degree': ''}, {'date': '2017-03-17', 'close': '2346', 'degree': ''}, {'date': '2017-03-24', 'close': '2365', 'degree': ''}, {'date': '2017-03-31', 'close': '2359', 'degree': '30'}, {'date': '2017-04-07', 'close': '2388', 'degree': '33'}, {'date': '2017-04-14', 'close': '2355', 'degree': '29'}, {'date': '2017-04-21', 'close': '2347', 'degree': '28'}, {'date': '2017-04-28', 'close': '2347', 'degree': '22'}, {'date': '2017-05-05', 'close': '2320', 'degree': '17'}, {'date': '2017-05-12', 'close': '2375', 'degree': '22'}, {'date': '2017-05-19', 'close': '2361', 'degree': '20'}, {'date': '2017-05-26', 'close': '2471', 'degree': '34'}, {'date': '2017-06-02', 'close': '2475', 'degree': '34'}, {'date': '2017-06-09', 'close': '2519', 'degree': '38'}, {'date': '2017-06-16', 'close': '2452', 'degree': '34'}, {'date': '2017-06-23', 'close': '2529', 'degree': '40'}, {'date': '2017-06-30', 'close': '2549', 'degree': '41'}, {'date': '2017-07-07', 'close': '2543', 'degree': '41'}, {'date': '2017-07-14', 'close': '2622', 'degree': '45'}, {'date': '2017-07-21', 'close': '2639', 'degree': '46'}, {'date': '2017-07-28', 'close': '2636', 'degree': '46'}, {'date': '2017-08-04', 'close': '2627', 'degree': '45'}, {'date': '2017-08-11', 'close': '2570', 'degree': '43'}, {'date': '2017-08-18', 'close': '2613', 'degree': '45'}, {'date': '2017-08-25', 'close': '2706', 'degree': '50'}, {'date': '2017-09-01', 'close': '2710', 'degree': '49'}, {'date': '2017-09-08', 'close': '2686', 'degree': '47'}, {'date': '2017-09-15', 'close': '2668', 'degree': '46'}, {'date': '2017-09-22', 'close': '2679', 'degree': '47'}, {'date': '2017-09-29', 'close': '2672', 'degree': '47'}, {'date': '2017-10-13', 'close': '2713', 'degree': '50'}, {'date': '2017-10-20', 'close': '2737', 'degree': '51'}, {'date': '2017-10-27', 'close': '2814', 'degree': '55'}, {'date': '2017-11-03', 'close': '2800', 'degree': '49'}, {'date': '2017-11-10', 'close': '2862', 'degree': '53'}, {'date': '2017-11-17', 'close': '2938', 'degree': '57'}, {'date': '2017-11-24', 'close': '2936', 'degree': '57'}, {'date': '2017-12-01', 'close': '2842', 'degree': '51'}, {'date': '2017-12-08', 'close': '2865', 'degree': '53'}, {'date': '2017-12-15', 'close': '2820', 'degree': '51'}, {'date': '2017-12-22', 'close': '2880', 'degree': '54'}, {'date': '2017-12-29', 'close': '2860', 'degree': '52'}, {'date': '2018-01-05', 'close': '2932', 'degree': '56'}, {'date': '2018-01-12', 'close': '3018', 'degree': '61'}, {'date': '2018-01-19', 'close': '3117', 'degree': '64'}, {'date': '2018-01-26', 'close': '3172', 'degree': '65'}, {'date': '2018-02-02', 'close': '3149', 'degree': '65'}, {'date': '2018-02-09', 'close': '2810', 'degree': '45'}, {'date': '2018-02-23', 'close': '2957', 'degree': '56'}, {'date': '2018-03-02', 'close': '2864', 'degree': '49'}, {'date': '2018-03-09', 'close': '2908', 'degree': '52'}, {'date': '2018-03-16', 'close': '2870', 'degree': '50'}, {'date': '2018-03-23', 'close': '2791', 'degree': '43'}, {'date': '2018-03-30', 'close': '2722', 'degree': '39'}, {'date': '2018-04-13', 'close': '2726', 'degree': '40'}, {'date': '2018-04-20', 'close': '2647', 'degree': '33'}, {'date': '2018-04-27', 'close': '2653', 'degree': '30'}, {'date': '2018-05-04', 'close': '2646', 'degree': '25'}, {'date': '2018-05-11', 'close': '2724', 'degree': '34'}, {'date': '2018-05-18', 'close': '2740', 'degree': '36'}, {'date': '2018-05-25', 'close': '2661', 'degree': '28'}, {'date': '2018-06-01', 'close': '2647', 'degree': '26'}, {'date': '2018-06-08', 'close': '2652', 'degree': '29'}, {'date': '2018-06-15', 'close': '2667', 'degree': '33'}, {'date': '2018-06-22', 'close': '2583', 'degree': '21'}, {'date': '2018-06-29', 'close': '2479', 'degree': '29'}, {'date': '2018-07-06', 'close': '2402', 'degree': '22'}, {'date': '2018-07-13', 'close': '2476', 'degree': '33'}, {'date': '2018-07-20', 'close': '2493', 'degree': '38'}, {'date': '2018-07-27', 'close': '2525', 'degree': '41'}, {'date': '2018-08-03', 'close': '2413', 'degree': '24'}, {'date': '2018-08-10', 'close': '2503', 'degree': '37'}, {'date': '2018-08-17', 'close': '2374', 'degree': '19'}, {'date': '2018-08-24', 'close': '2471', 'degree': '30'}, {'date': '2018-08-31', 'close': '2474', 'degree': '24'}, {'date': '2018-09-07', 'close': '2437', 'degree': '20'}, {'date': '2018-09-14', 'close': '2425', 'degree': '20'}, {'date': '2018-09-21', 'close': '2573', 'degree': '41'}, {'date': '2018-09-28', 'close': '2606', 'degree': '43'}, {'date': '2018-10-12', 'close': '2444', 'degree': '21'}, {'date': '2018-10-19', 'close': '2446', 'degree': '21'}, {'date': '2018-10-26', 'close': '2468', 'degree': '24'}, {'date': '2018-11-02', 'close': '2542', 'degree': '21'}, {'date': '2018-11-09', 'close': '2434', 'degree': '13'}, {'date': '2018-11-16', 'close': '2461', 'degree': '16'}, {'date': '2018-11-23', 'close': '2399', 'degree': '10'}, {'date': '2018-11-30', 'close': '2428', 'degree': '13'}, {'date': '2018-12-07', 'close': '2430', 'degree': '13'}, {'date': '2018-12-14', 'close': '2423', 'degree': '14'}, {'date': '2018-12-21', 'close': '2306', 'degree': '4'}, {'date': '2018-12-28', 'close': '2293', 'degree': '6'}, {'date': '2019-01-04', 'close': '2314', 'degree': '7'}, {'date': '2019-01-11', 'close': '2354', 'degree': '12'}, {'date': '2019-01-18', 'close': '2417', 'degree': '17'}, {'date': '2019-01-25', 'close': '2441', 'degree': '19'}, {'date': '2019-02-01', 'close': '2499', 'degree': '23'}, {'date': '2019-02-15', 'close': '2517', 'degree': '25'}, {'date': '2019-02-22', 'close': '2623', 'degree': '41'}, {'date': '2019-03-01', 'close': '2819', 'degree': '56'}, {'date': '2019-03-08', 'close': '2685', 'degree': '48'}, {'date': '2019-03-15', 'close': '2755', 'degree': '52'}, {'date': '2019-03-22', 'close': '2795', 'degree': '54'}, {'date': '2019-03-29', 'close': '2838', 'degree': '57'}, {'date': '2019-04-12', 'close': '2920', 'degree': '63'}, {'date': '2019-04-19', 'close': '3042', 'degree': '72'}, {'date': '2019-04-26', 'close': '2892', 'degree': '59'}, {'date': '2019-05-10', 'close': '2793', 'degree': '44'}, {'date': '2019-05-17', 'close': '2735', 'degree': '36'}, {'date': '2019-05-24', 'close': '2702', 'degree': '33'}, {'date': '2019-05-31', 'close': '2728', 'degree': '38'}, {'date': '2019-06-14', 'close': '2785', 'degree': '47'}, {'date': '2019-06-21', 'close': '2938', 'degree': '58'}, {'date': '2019-06-28', 'close': '2930', 'degree': '64'}, {'date': '2019-07-05', 'close': '2961', 'degree': '68'}, {'date': '2019-07-12', 'close': '2902', 'degree': '65'}, {'date': '2019-07-19', 'close': '2895', 'degree': '64'}, {'date': '2019-07-26', 'close': '2939', 'degree': '68'}, {'date': '2019-08-02', 'close': '2843', 'degree': '58'}, {'date': '2019-08-09', 'close': '2772', 'degree': '54'}, {'date': '2019-08-16', 'close': '2824', 'degree': '56'}, {'date': '2019-08-23', 'close': '2917', 'degree': '63'}, {'date': '2019-08-30', 'close': '2872', 'degree': '58'}, {'date': '2019-09-06', 'close': '2981', 'degree': '69'}, {'date': '2019-09-20', 'close': '2963', 'degree': '68'}, {'date': '2019-09-27', 'close': '2929', 'degree': '63'}, {'date': '2019-10-11', 'close': '2983', 'degree': '70'}, {'date': '2019-10-18', 'close': '2963', 'degree': '68'}, {'date': '2019-10-25', 'close': '2967', 'degree': '65'}, {'date': '2019-11-01', 'close': '3002', 'degree': '58'}, {'date': '2019-11-08', 'close': '3012', 'degree': '59'}, {'date': '2019-11-15', 'close': '2954', 'degree': '55'}, {'date': '2019-11-22', 'close': '2922', 'degree': '53'}, {'date': '2019-11-29', 'close': '2894', 'degree': '51'}, {'date': '2019-12-06', 'close': '2939', 'degree': '54'}, {'date': '2019-12-13', 'close': '3006', 'degree': '60'}, {'date': '2019-12-20', 'close': '3012', 'degree': '60'}, {'date': '2019-12-27', 'close': '3017', 'degree': '61'}, {'date': '2020-01-03', 'close': '3078', 'degree': '81'}, {'date': '2020-01-10', 'close': '3067', 'degree': '79'}, {'date': '2020-01-17', 'close': '3053', 'degree': '78'}, {'date': '2020-02-07', 'close': '2851', 'degree': '56'}, {'date': '2020-02-14', 'close': '2895', 'degree': '60'}, {'date': '2020-02-21', 'close': '2968', 'degree': '65'}, {'date': '2020-02-28', 'close': '2821', 'degree': '52'}, {'date': '2020-03-06', 'close': '2964', 'degree': '65'}, {'date': '2020-03-13', 'close': '2798', 'degree': '50'}, {'date': '2020-03-20', 'close': '2628', 'degree': '26'}, {'date': '2020-03-27', 'close': '2701', 'degree': '38'}, {'date': '2020-04-03', 'close': '2708', 'degree': '39'}, {'date': '2020-04-10', 'close': '2749', 'degree': '42'}, {'date': '2020-04-17', 'close': '2809', 'degree': '50'}, {'date': '2020-04-24', 'close': '2776', 'degree': '44'}, {'date': '2020-05-08', 'close': '2873', 'degree': '48'}, {'date': '2020-05-15', 'close': '2819', 'degree': '40'}, {'date': '2020-05-22', 'close': '2775', 'degree': '33'}, {'date': '2020-05-29', 'close': '2806', 'degree': '38'}, {'date': '2020-06-05', 'close': '2896', 'degree': '51'}, {'date': '2020-06-12', 'close': '2884', 'degree': '51'}, {'date': '2020-06-19', 'close': '2925', 'degree': '53'}, {'date': '2020-07-03', 'close': '3159', 'degree': '89'}, {'date': '2020-07-10', 'close': '3351', 'degree': '92'}, {'date': '2020-07-17', 'close': '3185', 'degree': '90'}, {'date': '2020-07-24', 'close': '3158', 'degree': '89'}, {'date': '2020-07-31', 'close': '3249', 'degree': '90'}, {'date': '2020-08-07', 'close': '3263', 'degree': '90'}, {'date': '2020-08-14', 'close': '3288', 'degree': '91'}, {'date': '2020-08-21', 'close': '3284', 'degree': '90'}, {'date': '2020-08-28', 'close': '3368', 'degree': '92'}, {'date': '2020-09-04', 'close': '3309', 'degree': '90'}, {'date': '2020-09-11', 'close': '3265', 'degree': '88'}, {'date': '2020-09-18', 'close': '3347', 'degree': '91'}, {'date': '2020-09-25', 'close': '3229', 'degree': '88'}, {'date': '2020-10-09', 'close': '3286', 'degree': '89'}, {'date': '2020-10-16', 'close': '3380', 'degree': '92'}, {'date': '2020-10-23', 'close': '3346', 'degree': '90'}, {'date': '2020-10-30', 'close': '3280', 'degree': '86'}, {'date': '2020-11-06', 'close': '3359', 'degree': '87'}, {'date': '2020-11-13', 'close': '3338', 'degree': '86'}, {'date': '2020-11-20', 'close': '3411', 'degree': '89'}, {'date': '2020-11-27', 'close': '3498', 'degree': '92'}, {'date': '2020-12-04', 'close': '3541', 'degree': '93'}, {'date': '2020-12-11', 'close': '3427', 'degree': '89'}, {'date': '2020-12-18', 'close': '3507', 'degree': '92'}, {'date': '2020-12-25', 'close': '3512', 'degree': '92'}, {'date': '2021-01-08', 'close': '3788', 'degree': '98'}, {'date': '2021-01-15', 'close': '3817', 'degree': '98'}, {'date': '2021-01-22', 'close': '3846', 'degree': '98'}, {'date': '2021-01-29', 'close': '3713', 'degree': '97'}, {'date': '2021-02-05', 'close': '3840', 'degree': '97'}, {'date': '2021-02-19', 'close': '4014', 'degree': '99'}, {'date': '2021-02-26', 'close': '3756', 'degree': '96'}, {'date': '2021-03-05', 'close': '3688', 'degree': '95'}, {'date': '2021-03-12', 'close': '3632', 'degree': '95'}, {'date': '2021-03-19', 'close': '3512', 'degree': '94'}, {'date': '2021-03-26', 'close': '3529', 'degree': '94'}, {'date': '2021-04-02', 'close': '3616', 'degree': '94'}, {'date': '2021-04-09', 'close': '3514', 'degree': '93'}, {'date': '2021-04-16', 'close': '3448', 'degree': '92'}, {'date': '2021-04-23', 'close': '3524', 'degree': '93'}, {'date': '2021-04-30', 'close': '3491', 'degree': '91'}, {'date': '2021-05-07', 'close': '3406', 'degree': '90'}, {'date': '2021-05-14', 'close': '3503', 'degree': '91'}, {'date': '2021-05-21', 'close': '3481', 'degree': '91'}, {'date': '2021-05-28', 'close': '3659', 'degree': '93'}, {'date': '2021-06-04', 'close': '3612', 'degree': '92'}, {'date': '2021-06-11', 'close': '3576', 'degree': '91'}, {'date': '2021-06-18', 'close': '3454', 'degree': '89'}, {'date': '2021-06-25', 'close': '3535', 'degree': '90'}, {'date': '2021-07-02', 'close': '3408', 'degree': '95'}, {'date': '2021-07-09', 'close': '3361', 'degree': '94'}, {'date': '2021-07-16', 'close': '3369', 'degree': '94'}, {'date': '2021-07-23', 'close': '3357', 'degree': '94'}, {'date': '2021-07-30', 'close': '3132', 'degree': '90'}, {'date': '2021-08-06', 'close': '3195', 'degree': '90'}, {'date': '2021-08-13', 'close': '3217', 'degree': '91'}, {'date': '2021-08-20', 'close': '3072', 'degree': '87'}, {'date': '2021-08-27', 'close': '3123', 'degree': '87'}, {'date': '2021-09-03', 'close': '3175', 'degree': '87'}, {'date': '2021-09-10', 'close': '3252', 'degree': '89'}, {'date': '2021-09-17', 'close': '3161', 'degree': '87'}, {'date': '2021-09-24', 'close': '3145', 'degree': '86'}, {'date': '2021-10-08', 'close': '3256', 'degree': '89'}, {'date': '2021-10-15', 'close': '3294', 'degree': '90'}, {'date': '2021-10-22', 'close': '3318', 'degree': '91'}, {'date': '2021-10-29', 'close': '3267', 'degree': '87'}, {'date': '2021-11-05', 'close': '3201', 'degree': '84'}, {'date': '2021-11-12', 'close': '3220', 'degree': '85'}, {'date': '2021-11-19', 'close': '3212', 'degree': '84'}, {'date': '2021-11-26', 'close': '3187', 'degree': '83'}, {'date': '2021-12-03', 'close': '3221', 'degree': '84'}, {'date': '2021-12-10', 'close': '3353', 'degree': '89'}, {'date': '2021-12-17', 'close': '3278', 'degree': '85'}, {'date': '2021-12-24', 'close': '3290', 'degree': '86'}, {'date': '2021-12-31', 'close': '3274', 'degree': '94'}, {'date': '2022-01-07', 'close': '3223', 'degree': '93'}, {'date': '2022-01-14', 'close': '3139', 'degree': '89'}, {'date': '2022-01-21', 'close': '3218', 'degree': '91'}, {'date': '2022-01-28', 'close': '3054', 'degree': '85'}, {'date': '2022-02-11', 'close': '3142', 'degree': '88'}, {'date': '2022-02-18', 'close': '3162', 'degree': '89'}, {'date': '2022-02-25', 'close': '3075', 'degree': '85'}, {'date': '2022-03-04', 'close': '3062', 'degree': '84'}, {'date': '2022-03-11', 'close': '2935', 'degree': '79'}, {'date': '2022-03-18', 'close': '2913', 'degree': '78'}, {'date': '2022-03-25', 'close': '2856', 'degree': '76'}, {'date': '2022-04-01', 'close': '2943', 'degree': '78'}, {'date': '2022-04-08', 'close': '2925', 'degree': '77'}, {'date': '2022-04-15', 'close': '2930', 'degree': '77'}, {'date': '2022-04-22', 'close': '2814', 'degree': '70'}, {'date': '2022-04-29', 'close': '2805', 'degree': '68'}, {'date': '2022-05-06', 'close': '2719', 'degree': '65'}, {'date': '2022-05-13', 'close': '2748', 'degree': '66'}, {'date': '2022-05-20', 'close': '2807', 'degree': '67'}, {'date': '2022-05-27', 'close': '2763', 'degree': '66'}, {'date': '2022-06-10', 'close': '2899', 'degree': '69'}, {'date': '2022-06-17', 'close': '2936', 'degree': '70'}, {'date': '2022-06-24', 'close': '2974', 'degree': '74'}, {'date': '2022-07-01', 'close': '3045', 'degree': '91'}, {'date': '2022-07-08', 'close': '2993', 'degree': '89'}, {'date': '2022-07-15', 'close': '2839', 'degree': '83'}, {'date': '2022-07-22', 'close': '2848', 'degree': '83'}, {'date': '2022-07-29', 'close': '2792', 'degree': '80'}, {'date': '2022-08-05', 'close': '2774', 'degree': '79'}, {'date': '2022-08-12', 'close': '2796', 'degree': '80'}, {'date': '2022-08-19', 'close': '2750', 'degree': '77'}, {'date': '2022-08-26', 'close': '2751', 'degree': '76'}, {'date': '2022-09-02', 'close': '2711', 'degree': '70'}, {'date': '2022-09-09', 'close': '2757', 'degree': '73'}, {'date': '2022-09-16', 'close': '2678', 'degree': '67'}, {'date': '2022-09-23', 'close': '2629', 'degree': '65'}, {'date': '2022-09-30', 'close': '2610', 'degree': '64'}, {'date': '2022-10-14', 'close': '2584', 'degree': '64'}, {'date': '2022-10-21', 'close': '2487', 'degree': '59'}, {'date': '2022-10-28', 'close': '2326', 'degree': '41'}, {'date': '2022-11-04', 'close': '2468', 'degree': '50'}, {'date': '2022-11-11', 'close': '2518', 'degree': '56'}, {'date': '2022-11-18', 'close': '2546', 'degree': '58'}, {'date': '2022-11-25', 'close': '2544', 'degree': '58'}, {'date': '2022-12-02', 'close': '2614', 'degree': '62'}, {'date': '2022-12-09', 'close': '2706', 'degree': '65'}, {'date': '2022-12-16', 'close': '2688', 'degree': '65'}, {'date': '2022-12-23', 'close': '2615', 'degree': '62'}, {'date': '2022-12-30', 'close': '2635', 'degree': '68'}, {'date': '2023-01-06', 'close': '2713', 'degree': '74'}, {'date': '2023-01-13', 'close': '2787', 'degree': '77'}, {'date': '2023-01-20', 'close': '2836', 'degree': '79'}, {'date': '2023-02-03', 'close': '2774', 'degree': '76'}, {'date': '2023-02-10', 'close': '2746', 'degree': '74'}, {'date': '2023-02-17', 'close': '2714', 'degree': '72'}, {'date': '2023-02-24', 'close': '2727', 'degree': '73'}, {'date': '2023-03-03', 'close': '2774', 'degree': '76'}, {'date': '2023-03-10', 'close': '2636', 'degree': '66'}, {'date': '2023-03-17', 'close': '2628', 'degree': '65'}, {'date': '2023-03-24', 'close': '2653', 'degree': '66'}, {'date': '2023-03-31', 'close': '2661', 'degree': '64'}, {'date': '2023-04-07', 'close': '2684', 'degree': '66'}, {'date': '2023-04-14', 'close': '2679', 'degree': '65'}, {'date': '2023-04-21', 'close': '2654', 'degree': '63'}, {'date': '2023-04-28', 'close': '2677', 'degree': '61'}, {'date': '2023-05-05', 'close': '2685', 'degree': '60'}, {'date': '2023-05-12', 'close': '2630', 'degree': '57'}, {'date': '2023-05-19', 'close': '2633', 'degree': '57'}, {'date': '2023-05-26', 'close': '2559', 'degree': '51'}, {'date': '2023-06-02', 'close': '2543', 'degree': '49'}, {'date': '2023-06-09', 'close': '2543', 'degree': '49'}, {'date': '2023-06-16', 'close': '2600', 'degree': '57'}, {'date': '2023-06-30', 'close': '2492', 'degree': '54'}, {'date': '2023-07-07', 'close': '2489', 'degree': '53'}, {'date': '2023-07-14', 'close': '2547', 'degree': '60'}, {'date': '2023-07-21', 'close': '2509', 'degree': '59'}, {'date': '2023-07-28', 'close': '2647', 'degree': '66'}, {'date': '2023-08-04', 'close': '2648', 'degree': '66'}, {'date': '2023-08-11', 'close': '2568', 'degree': '61'}, {'date': '2023-08-18', 'close': '2507', 'degree': '57'}, {'date': '2023-08-25', 'close': '2485', 'degree': '55'}, {'date': '2023-09-01', 'close': '2532', 'degree': '52'}, {'date': '2023-09-08', 'close': '2519', 'degree': '51'}, {'date': '2023-09-15', 'close': '2514', 'degree': '50'}, {'date': '2023-09-22', 'close': '2550', 'degree': '55'}, {'date': '2023-10-13', 'close': '2489', 'degree': '47'}, {'date': '2023-10-20', 'close': '2389', 'degree': '36'}, {'date': '2023-10-27', 'close': '2414', 'degree': '37'}, {'date': '2023-11-03', 'close': '2436', 'degree': '36'}, {'date': '2023-11-10', 'close': '2414', 'degree': '34'}, {'date': '2023-11-17', 'close': '2398', 'degree': '33'}, {'date': '2023-11-24', 'close': '2391', 'degree': '32'}, {'date': '2023-12-01', 'close': '2352', 'degree': '29'}, {'date': '2023-12-08', 'close': '2281', 'degree': '18'}, {'date': '2023-12-15', 'close': '2245', 'degree': '12'}, {'date': '2023-12-22', 'close': '2270', 'degree': '17'}, {'date': '2023-12-29', 'close': '2326', 'degree': '24'}, {'date': '2024-01-05', 'close': '2268', 'degree': '14'}, {'date': '2024-01-12', 'close': '2237', 'degree': '10'}, {'date': '2024-01-19', 'close': '2243', 'degree': '11'}, {'date': '2024-01-26', 'close': '2314', 'degree': '19'}, {'date': '2024-02-02', 'close': '2229', 'degree': '7'}, {'date': '2024-02-23', 'close': '2433', 'degree': '35'}, {'date': '2024-03-01', 'close': '2414', 'degree': '33'}, {'date': '2024-03-08', 'close': '2426', 'degree': '34'}, {'date': '2024-03-15', 'close': '2427', 'degree': '34'}, {'date': '2024-03-22', 'close': '2403', 'degree': '31'}, {'date': '2024-03-29', 'close': '2414', 'degree': '30'}, {'date': '2024-04-12', 'close': '2374', 'degree': '23'}, {'date': '2024-04-19', 'close': '2430', 'degree': '31'}, {'date': '2024-04-26', 'close': '2461', 'degree': '33'}, {'date': '2024-05-10', 'close': '2508', 'degree': '32'}, {'date': '2024-05-17', 'close': '2524', 'degree': '34'}, {'date': '2024-05-24', 'close': '2474', 'degree': '28'}, {'date': '2024-05-31', 'close': '2462', 'degree': '25'}, {'date': '2024-06-07', 'close': '2457', 'degree': '26'}, {'date': '2024-06-14', 'close': '2426', 'degree': '22'}, {'date': '2024-06-21', 'close': '2398', 'degree': '17'}, {'date': '2024-06-28', 'close': '2394', 'degree': '7'}, {'date': '2024-07-05', 'close': '2386', 'degree': '7'}, {'date': '2024-07-12', 'close': '2412', 'degree': '14'}, {'date': '2024-07-19', 'close': '2456', 'degree': '23'}, {'date': '2024-07-26', 'close': '2355', 'degree': '9'}, {'date': '2024-08-02', 'close': '2343', 'degree': '8'}, {'date': '2024-08-09', 'close': '2317', 'degree': '6'}, {'date': '2024-08-16', 'close': '2345', 'degree': '8'}, {'date': '2024-08-23', 'close': '2355', 'degree': '8'}, {'date': '2024-08-30', 'close': '2335', 'degree': '6'}, {'date': '2024-09-06', 'close': '2263', 'degree': '2'}, {'date': '2024-09-13', 'close': '2205', 'degree': '0'}, {'date': '2024-09-20', 'close': '2233', 'degree': '1'}, {'date': '2024-09-27', 'close': '2571', 'degree': '36'}, {'date': '2024-10-11', 'close': '2680', 'degree': '45'}];   // [{date: 'YYYY-MM-DD', close: 指数, degree: 温度}, ...]
+var list =
+[
+    {
+        "date": "2009-01-09",
+        "close": "1447",
+        "degree": ""
+    },
+    {
+        "date": "2009-01-16",
+        "close": "1502",
+        "degree": ""
+    },
+    {
+        "date": "2009-01-23",
+        "close": "1538",
+        "degree": ""
+    },
+    {
+        "date": "2009-02-06",
+        "close": "1689",
+        "degree": ""
+    },
+    {
+        "date": "2009-02-13",
+        "close": "1755",
+        "degree": ""
+    },
+    {
+        "date": "2009-02-20",
+        "close": "1695",
+        "degree": ""
+    },
+    {
+        "date": "2009-02-27",
+        "close": "1592",
+        "degree": ""
+    },
+    {
+        "date": "2009-03-06",
+        "close": "1676",
+        "degree": ""
+    },
+    {
+        "date": "2009-03-13",
+        "close": "1626",
+        "degree": ""
+    },
+    {
+        "date": "2009-03-20",
+        "close": "1726",
+        "degree": ""
+    },
+    {
+        "date": "2009-03-27",
+        "close": "1825",
+        "degree": ""
+    },
+    {
+        "date": "2009-04-03",
+        "close": "1892",
+        "degree": ""
+    },
+    {
+        "date": "2009-04-10",
+        "close": "1895",
+        "degree": ""
+    },
+    {
+        "date": "2009-04-17",
+        "close": "1920",
+        "degree": ""
+    },
+    {
+        "date": "2009-04-24",
+        "close": "1860",
+        "degree": ""
+    },
+    {
+        "date": "2009-05-08",
+        "close": "2022",
+        "degree": ""
+    },
+    {
+        "date": "2009-05-15",
+        "close": "2022",
+        "degree": ""
+    },
+    {
+        "date": "2009-05-22",
+        "close": "1967",
+        "degree": ""
+    },
+    {
+        "date": "2009-06-05",
+        "close": "2160",
+        "degree": ""
+    },
+    {
+        "date": "2009-06-12",
+        "close": "2156",
+        "degree": ""
+    },
+    {
+        "date": "2009-06-19",
+        "close": "2309",
+        "degree": ""
+    },
+    {
+        "date": "2009-06-26",
+        "close": "2344",
+        "degree": ""
+    },
+    {
+        "date": "2009-07-03",
+        "close": "2508",
+        "degree": ""
+    },
+    {
+        "date": "2009-07-10",
+        "close": "2519",
+        "degree": ""
+    },
+    {
+        "date": "2009-07-17",
+        "close": "2604",
+        "degree": ""
+    },
+    {
+        "date": "2009-07-24",
+        "close": "2743",
+        "degree": ""
+    },
+    {
+        "date": "2009-07-31",
+        "close": "2816",
+        "degree": ""
+    },
+    {
+        "date": "2009-08-07",
+        "close": "2634",
+        "degree": ""
+    },
+    {
+        "date": "2009-08-14",
+        "close": "2463",
+        "degree": ""
+    },
+    {
+        "date": "2009-08-21",
+        "close": "2367",
+        "degree": ""
+    },
+    {
+        "date": "2009-08-28",
+        "close": "2193",
+        "degree": ""
+    },
+    {
+        "date": "2009-09-04",
+        "close": "2237",
+        "degree": ""
+    },
+    {
+        "date": "2009-09-11",
+        "close": "2356",
+        "degree": ""
+    },
+    {
+        "date": "2009-09-18",
+        "close": "2296",
+        "degree": ""
+    },
+    {
+        "date": "2009-09-25",
+        "close": "2226",
+        "degree": ""
+    },
+    {
+        "date": "2009-10-09",
+        "close": "2308",
+        "degree": ""
+    },
+    {
+        "date": "2009-10-16",
+        "close": "2358",
+        "degree": ""
+    },
+    {
+        "date": "2009-10-23",
+        "close": "2481",
+        "degree": ""
+    },
+    {
+        "date": "2009-10-30",
+        "close": "2376",
+        "degree": ""
+    },
+    {
+        "date": "2009-11-06",
+        "close": "2512",
+        "degree": ""
+    },
+    {
+        "date": "2009-11-13",
+        "close": "2523",
+        "degree": ""
+    },
+    {
+        "date": "2009-11-20",
+        "close": "2583",
+        "degree": ""
+    },
+    {
+        "date": "2009-11-27",
+        "close": "2388",
+        "degree": ""
+    },
+    {
+        "date": "2009-12-04",
+        "close": "2587",
+        "degree": ""
+    },
+    {
+        "date": "2009-12-11",
+        "close": "2507",
+        "degree": ""
+    },
+    {
+        "date": "2009-12-18",
+        "close": "2424",
+        "degree": ""
+    },
+    {
+        "date": "2009-12-25",
+        "close": "2406",
+        "degree": ""
+    },
+    {
+        "date": "2010-01-08",
+        "close": "2466",
+        "degree": ""
+    },
+    {
+        "date": "2010-01-15",
+        "close": "2427",
+        "degree": ""
+    },
+    {
+        "date": "2010-01-22",
+        "close": "2380",
+        "degree": ""
+    },
+    {
+        "date": "2010-01-29",
+        "close": "2243",
+        "degree": ""
+    },
+    {
+        "date": "2010-02-05",
+        "close": "2219",
+        "degree": ""
+    },
+    {
+        "date": "2010-02-12",
+        "close": "2284",
+        "degree": ""
+    },
+    {
+        "date": "2010-02-26",
+        "close": "2274",
+        "degree": ""
+    },
+    {
+        "date": "2010-03-05",
+        "close": "2267",
+        "degree": ""
+    },
+    {
+        "date": "2010-03-12",
+        "close": "2274",
+        "degree": ""
+    },
+    {
+        "date": "2010-03-19",
+        "close": "2310",
+        "degree": ""
+    },
+    {
+        "date": "2010-03-26",
+        "close": "2292",
+        "degree": ""
+    },
+    {
+        "date": "2010-04-02",
+        "close": "2379",
+        "degree": ""
+    },
+    {
+        "date": "2010-04-09",
+        "close": "2345",
+        "degree": ""
+    },
+    {
+        "date": "2010-04-16",
+        "close": "2329",
+        "degree": ""
+    },
+    {
+        "date": "2010-04-23",
+        "close": "2185",
+        "degree": ""
+    },
+    {
+        "date": "2010-04-30",
+        "close": "2149",
+        "degree": ""
+    },
+    {
+        "date": "2010-05-07",
+        "close": "1980",
+        "degree": ""
+    },
+    {
+        "date": "2010-05-14",
+        "close": "2019",
+        "degree": ""
+    },
+    {
+        "date": "2010-05-21",
+        "close": "1943",
+        "degree": ""
+    },
+    {
+        "date": "2010-05-28",
+        "close": "1973",
+        "degree": ""
+    },
+    {
+        "date": "2010-06-04",
+        "close": "1894",
+        "degree": ""
+    },
+    {
+        "date": "2010-06-11",
+        "close": "1883",
+        "degree": ""
+    },
+    {
+        "date": "2010-06-18",
+        "close": "1870",
+        "degree": ""
+    },
+    {
+        "date": "2010-06-25",
+        "close": "1915",
+        "degree": ""
+    },
+    {
+        "date": "2010-07-02",
+        "close": "1812",
+        "degree": ""
+    },
+    {
+        "date": "2010-07-09",
+        "close": "1870",
+        "degree": ""
+    },
+    {
+        "date": "2010-07-16",
+        "close": "1839",
+        "degree": ""
+    },
+    {
+        "date": "2010-07-23",
+        "close": "1945",
+        "degree": ""
+    },
+    {
+        "date": "2010-07-30",
+        "close": "1986",
+        "degree": ""
+    },
+    {
+        "date": "2010-08-06",
+        "close": "1979",
+        "degree": ""
+    },
+    {
+        "date": "2010-08-13",
+        "close": "1930",
+        "degree": ""
+    },
+    {
+        "date": "2010-08-20",
+        "close": "1967",
+        "degree": ""
+    },
+    {
+        "date": "2010-08-27",
+        "close": "1917",
+        "degree": ""
+    },
+    {
+        "date": "2010-09-03",
+        "close": "1929",
+        "degree": ""
+    },
+    {
+        "date": "2010-09-10",
+        "close": "1915",
+        "degree": ""
+    },
+    {
+        "date": "2010-09-17",
+        "close": "1857",
+        "degree": ""
+    },
+    {
+        "date": "2010-10-08",
+        "close": "1990",
+        "degree": ""
+    },
+    {
+        "date": "2010-10-15",
+        "close": "2254",
+        "degree": ""
+    },
+    {
+        "date": "2010-10-22",
+        "close": "2231",
+        "degree": ""
+    },
+    {
+        "date": "2010-10-29",
+        "close": "2189",
+        "degree": ""
+    },
+    {
+        "date": "2010-11-05",
+        "close": "2279",
+        "degree": ""
+    },
+    {
+        "date": "2010-11-12",
+        "close": "2130",
+        "degree": ""
+    },
+    {
+        "date": "2010-11-19",
+        "close": "2039",
+        "degree": ""
+    },
+    {
+        "date": "2010-11-26",
+        "close": "2018",
+        "degree": ""
+    },
+    {
+        "date": "2010-12-03",
+        "close": "2008",
+        "degree": ""
+    },
+    {
+        "date": "2010-12-10",
+        "close": "2021",
+        "degree": ""
+    },
+    {
+        "date": "2010-12-17",
+        "close": "2032",
+        "degree": ""
+    },
+    {
+        "date": "2010-12-24",
+        "close": "2013",
+        "degree": ""
+    },
+    {
+        "date": "2010-12-31",
+        "close": "1977",
+        "degree": ""
+    },
+    {
+        "date": "2011-01-07",
+        "close": "2006",
+        "degree": ""
+    },
+    {
+        "date": "2011-01-14",
+        "close": "1982",
+        "degree": ""
+    },
+    {
+        "date": "2011-01-21",
+        "close": "1925",
+        "degree": ""
+    },
+    {
+        "date": "2011-01-28",
+        "close": "1945",
+        "degree": ""
+    },
+    {
+        "date": "2011-02-11",
+        "close": "1976",
+        "degree": ""
+    },
+    {
+        "date": "2011-02-18",
+        "close": "2030",
+        "degree": ""
+    },
+    {
+        "date": "2011-02-25",
+        "close": "2006",
+        "degree": ""
+    },
+    {
+        "date": "2011-03-04",
+        "close": "2080",
+        "degree": ""
+    },
+    {
+        "date": "2011-03-11",
+        "close": "2049",
+        "degree": ""
+    },
+    {
+        "date": "2011-03-18",
+        "close": "2034",
+        "degree": ""
+    },
+    {
+        "date": "2011-03-25",
+        "close": "2096",
+        "degree": ""
+    },
+    {
+        "date": "2011-04-01",
+        "close": "2126",
+        "degree": ""
+    },
+    {
+        "date": "2011-04-08",
+        "close": "2185",
+        "degree": ""
+    },
+    {
+        "date": "2011-04-15",
+        "close": "2201",
+        "degree": ""
+    },
+    {
+        "date": "2011-04-22",
+        "close": "2151",
+        "degree": ""
+    },
+    {
+        "date": "2011-04-29",
+        "close": "2113",
+        "degree": ""
+    },
+    {
+        "date": "2011-05-06",
+        "close": "2037",
+        "degree": ""
+    },
+    {
+        "date": "2011-05-13",
+        "close": "2043",
+        "degree": ""
+    },
+    {
+        "date": "2011-05-20",
+        "close": "2052",
+        "degree": ""
+    },
+    {
+        "date": "2011-05-27",
+        "close": "1976",
+        "degree": ""
+    },
+    {
+        "date": "2011-06-03",
+        "close": "1974",
+        "degree": ""
+    },
+    {
+        "date": "2011-06-10",
+        "close": "1951",
+        "degree": ""
+    },
+    {
+        "date": "2011-06-17",
+        "close": "1912",
+        "degree": ""
+    },
+    {
+        "date": "2011-06-24",
+        "close": "1997",
+        "degree": ""
+    },
+    {
+        "date": "2011-07-01",
+        "close": "1986",
+        "degree": ""
+    },
+    {
+        "date": "2011-07-08",
+        "close": "2014",
+        "degree": ""
+    },
+    {
+        "date": "2011-07-15",
+        "close": "2012",
+        "degree": ""
+    },
+    {
+        "date": "2011-07-22",
+        "close": "1964",
+        "degree": ""
+    },
+    {
+        "date": "2011-07-29",
+        "close": "1908",
+        "degree": ""
+    },
+    {
+        "date": "2011-08-05",
+        "close": "1850",
+        "degree": ""
+    },
+    {
+        "date": "2011-08-12",
+        "close": "1838",
+        "degree": ""
+    },
+    {
+        "date": "2011-08-19",
+        "close": "1806",
+        "degree": ""
+    },
+    {
+        "date": "2011-08-26",
+        "close": "1876",
+        "degree": ""
+    },
+    {
+        "date": "2011-09-02",
+        "close": "1820",
+        "degree": ""
+    },
+    {
+        "date": "2011-09-09",
+        "close": "1800",
+        "degree": ""
+    },
+    {
+        "date": "2011-09-16",
+        "close": "1784",
+        "degree": ""
+    },
+    {
+        "date": "2011-09-23",
+        "close": "1740",
+        "degree": ""
+    },
+    {
+        "date": "2011-09-30",
+        "close": "1684",
+        "degree": ""
+    },
+    {
+        "date": "2011-10-14",
+        "close": "1745",
+        "degree": ""
+    },
+    {
+        "date": "2011-10-21",
+        "close": "1676",
+        "degree": ""
+    },
+    {
+        "date": "2011-10-28",
+        "close": "1807",
+        "degree": ""
+    },
+    {
+        "date": "2011-11-04",
+        "close": "1831",
+        "degree": ""
+    },
+    {
+        "date": "2011-11-11",
+        "close": "1779",
+        "degree": ""
+    },
+    {
+        "date": "2011-11-18",
+        "close": "1720",
+        "degree": ""
+    },
+    {
+        "date": "2011-11-25",
+        "close": "1691",
+        "degree": ""
+    },
+    {
+        "date": "2011-12-02",
+        "close": "1704",
+        "degree": ""
+    },
+    {
+        "date": "2011-12-09",
+        "close": "1692",
+        "degree": ""
+    },
+    {
+        "date": "2011-12-16",
+        "close": "1628",
+        "degree": ""
+    },
+    {
+        "date": "2011-12-23",
+        "close": "1617",
+        "degree": ""
+    },
+    {
+        "date": "2011-12-30",
+        "close": "1617",
+        "degree": ""
+    },
+    {
+        "date": "2012-01-06",
+        "close": "1608",
+        "degree": ""
+    },
+    {
+        "date": "2012-01-13",
+        "close": "1685",
+        "degree": ""
+    },
+    {
+        "date": "2012-01-20",
+        "close": "1775",
+        "degree": ""
+    },
+    {
+        "date": "2012-02-03",
+        "close": "1772",
+        "degree": ""
+    },
+    {
+        "date": "2012-02-10",
+        "close": "1778",
+        "degree": ""
+    },
+    {
+        "date": "2012-02-17",
+        "close": "1765",
+        "degree": ""
+    },
+    {
+        "date": "2012-02-24",
+        "close": "1826",
+        "degree": ""
+    },
+    {
+        "date": "2012-03-02",
+        "close": "1843",
+        "degree": ""
+    },
+    {
+        "date": "2012-03-09",
+        "close": "1811",
+        "degree": ""
+    },
+    {
+        "date": "2012-03-16",
+        "close": "1780",
+        "degree": ""
+    },
+    {
+        "date": "2012-03-23",
+        "close": "1747",
+        "degree": ""
+    },
+    {
+        "date": "2012-03-30",
+        "close": "1705",
+        "degree": ""
+    },
+    {
+        "date": "2012-04-06",
+        "close": "1737",
+        "degree": ""
+    },
+    {
+        "date": "2012-04-13",
+        "close": "1777",
+        "degree": ""
+    },
+    {
+        "date": "2012-04-20",
+        "close": "1815",
+        "degree": ""
+    },
+    {
+        "date": "2012-04-27",
+        "close": "1822",
+        "degree": ""
+    },
+    {
+        "date": "2012-05-04",
+        "close": "1876",
+        "degree": ""
+    },
+    {
+        "date": "2012-05-11",
+        "close": "1815",
+        "degree": ""
+    },
+    {
+        "date": "2012-05-18",
+        "close": "1775",
+        "degree": ""
+    },
+    {
+        "date": "2012-05-25",
+        "close": "1776",
+        "degree": ""
+    },
+    {
+        "date": "2012-06-01",
+        "close": "1808",
+        "degree": ""
+    },
+    {
+        "date": "2012-06-08",
+        "close": "1738",
+        "degree": ""
+    },
+    {
+        "date": "2012-06-15",
+        "close": "1769",
+        "degree": ""
+    },
+    {
+        "date": "2012-06-29",
+        "close": "1708",
+        "degree": ""
+    },
+    {
+        "date": "2012-07-06",
+        "close": "1711",
+        "degree": ""
+    },
+    {
+        "date": "2012-07-13",
+        "close": "1685",
+        "degree": ""
+    },
+    {
+        "date": "2012-07-20",
+        "close": "1658",
+        "degree": ""
+    },
+    {
+        "date": "2012-07-27",
+        "close": "1630",
+        "degree": ""
+    },
+    {
+        "date": "2012-08-03",
+        "close": "1641",
+        "degree": ""
+    },
+    {
+        "date": "2012-08-10",
+        "close": "1665",
+        "degree": ""
+    },
+    {
+        "date": "2012-08-17",
+        "close": "1606",
+        "degree": ""
+    },
+    {
+        "date": "2012-08-24",
+        "close": "1588",
+        "degree": ""
+    },
+    {
+        "date": "2012-08-31",
+        "close": "1551",
+        "degree": ""
+    },
+    {
+        "date": "2012-09-07",
+        "close": "1619",
+        "degree": ""
+    },
+    {
+        "date": "2012-09-14",
+        "close": "1614",
+        "degree": ""
+    },
+    {
+        "date": "2012-09-21",
+        "close": "1545",
+        "degree": ""
+    },
+    {
+        "date": "2012-09-28",
+        "close": "1613",
+        "degree": ""
+    },
+    {
+        "date": "2012-10-12",
+        "close": "1618",
+        "degree": ""
+    },
+    {
+        "date": "2012-10-19",
+        "close": "1637",
+        "degree": ""
+    },
+    {
+        "date": "2012-10-26",
+        "close": "1584",
+        "degree": ""
+    },
+    {
+        "date": "2012-11-02",
+        "close": "1626",
+        "degree": ""
+    },
+    {
+        "date": "2012-11-09",
+        "close": "1591",
+        "degree": ""
+    },
+    {
+        "date": "2012-11-16",
+        "close": "1551",
+        "degree": ""
+    },
+    {
+        "date": "2012-11-23",
+        "close": "1568",
+        "degree": ""
+    },
+    {
+        "date": "2012-11-30",
+        "close": "1547",
+        "degree": ""
+    },
+    {
+        "date": "2012-12-07",
+        "close": "1634",
+        "degree": ""
+    },
+    {
+        "date": "2012-12-14",
+        "close": "1728",
+        "degree": ""
+    },
+    {
+        "date": "2012-12-21",
+        "close": "1737",
+        "degree": ""
+    },
+    {
+        "date": "2012-12-28",
+        "close": "1817",
+        "degree": ""
+    },
+    {
+        "date": "2013-01-04",
+        "close": "1870",
+        "degree": ""
+    },
+    {
+        "date": "2013-01-11",
+        "close": "1818",
+        "degree": ""
+    },
+    {
+        "date": "2013-01-18",
+        "close": "1886",
+        "degree": ""
+    },
+    {
+        "date": "2013-01-25",
+        "close": "1886",
+        "degree": ""
+    },
+    {
+        "date": "2013-02-01",
+        "close": "2055",
+        "degree": ""
+    },
+    {
+        "date": "2013-02-08",
+        "close": "2042",
+        "degree": ""
+    },
+    {
+        "date": "2013-02-22",
+        "close": "1883",
+        "degree": ""
+    },
+    {
+        "date": "2013-03-01",
+        "close": "1944",
+        "degree": ""
+    },
+    {
+        "date": "2013-03-08",
+        "close": "1901",
+        "degree": ""
+    },
+    {
+        "date": "2013-03-15",
+        "close": "1841",
+        "degree": ""
+    },
+    {
+        "date": "2013-03-22",
+        "close": "1904",
+        "degree": ""
+    },
+    {
+        "date": "2013-03-29",
+        "close": "1793",
+        "degree": ""
+    },
+    {
+        "date": "2013-04-12",
+        "close": "1774",
+        "degree": ""
+    },
+    {
+        "date": "2013-04-19",
+        "close": "1827",
+        "degree": ""
+    },
+    {
+        "date": "2013-04-26",
+        "close": "1766",
+        "degree": ""
+    },
+    {
+        "date": "2013-05-03",
+        "close": "1795",
+        "degree": ""
+    },
+    {
+        "date": "2013-05-10",
+        "close": "1819",
+        "degree": ""
+    },
+    {
+        "date": "2013-05-17",
+        "close": "1843",
+        "degree": ""
+    },
+    {
+        "date": "2013-05-24",
+        "close": "1829",
+        "degree": ""
+    },
+    {
+        "date": "2013-05-31",
+        "close": "1841",
+        "degree": ""
+    },
+    {
+        "date": "2013-06-07",
+        "close": "1760",
+        "degree": ""
+    },
+    {
+        "date": "2013-06-14",
+        "close": "1704",
+        "degree": ""
+    },
+    {
+        "date": "2013-06-21",
+        "close": "1633",
+        "degree": ""
+    },
+    {
+        "date": "2013-06-28",
+        "close": "1552",
+        "degree": ""
+    },
+    {
+        "date": "2013-07-05",
+        "close": "1542",
+        "degree": ""
+    },
+    {
+        "date": "2013-07-12",
+        "close": "1587",
+        "degree": ""
+    },
+    {
+        "date": "2013-07-19",
+        "close": "1511",
+        "degree": ""
+    },
+    {
+        "date": "2013-07-26",
+        "close": "1521",
+        "degree": ""
+    },
+    {
+        "date": "2013-08-02",
+        "close": "1536",
+        "degree": ""
+    },
+    {
+        "date": "2013-08-09",
+        "close": "1553",
+        "degree": ""
+    },
+    {
+        "date": "2013-08-16",
+        "close": "1592",
+        "degree": ""
+    },
+    {
+        "date": "2013-08-23",
+        "close": "1566",
+        "degree": ""
+    },
+    {
+        "date": "2013-08-30",
+        "close": "1589",
+        "degree": ""
+    },
+    {
+        "date": "2013-09-06",
+        "close": "1625",
+        "degree": ""
+    },
+    {
+        "date": "2013-09-13",
+        "close": "1749",
+        "degree": ""
+    },
+    {
+        "date": "2013-09-27",
+        "close": "1639",
+        "degree": ""
+    },
+    {
+        "date": "2013-10-11",
+        "close": "1669",
+        "degree": ""
+    },
+    {
+        "date": "2013-10-18",
+        "close": "1636",
+        "degree": ""
+    },
+    {
+        "date": "2013-10-25",
+        "close": "1611",
+        "degree": ""
+    },
+    {
+        "date": "2013-11-01",
+        "close": "1644",
+        "degree": ""
+    },
+    {
+        "date": "2013-11-08",
+        "close": "1587",
+        "degree": ""
+    },
+    {
+        "date": "2013-11-15",
+        "close": "1604",
+        "degree": ""
+    },
+    {
+        "date": "2013-11-22",
+        "close": "1642",
+        "degree": ""
+    },
+    {
+        "date": "2013-11-29",
+        "close": "1661",
+        "degree": ""
+    },
+    {
+        "date": "2013-12-06",
+        "close": "1675",
+        "degree": ""
+    },
+    {
+        "date": "2013-12-13",
+        "close": "1626",
+        "degree": ""
+    },
+    {
+        "date": "2013-12-20",
+        "close": "1537",
+        "degree": ""
+    },
+    {
+        "date": "2013-12-27",
+        "close": "1550",
+        "degree": ""
+    },
+    {
+        "date": "2014-01-03",
+        "close": "1536",
+        "degree": ""
+    },
+    {
+        "date": "2014-01-10",
+        "close": "1498",
+        "degree": ""
+    },
+    {
+        "date": "2014-01-17",
+        "close": "1475",
+        "degree": ""
+    },
+    {
+        "date": "2014-01-24",
+        "close": "1502",
+        "degree": ""
+    },
+    {
+        "date": "2014-02-07",
+        "close": "1475",
+        "degree": ""
+    },
+    {
+        "date": "2014-02-14",
+        "close": "1534",
+        "degree": ""
+    },
+    {
+        "date": "2014-02-21",
+        "close": "1505",
+        "degree": ""
+    },
+    {
+        "date": "2014-02-28",
+        "close": "1464",
+        "degree": ""
+    },
+    {
+        "date": "2014-03-07",
+        "close": "1455",
+        "degree": ""
+    },
+    {
+        "date": "2014-03-14",
+        "close": "1426",
+        "degree": ""
+    },
+    {
+        "date": "2014-03-21",
+        "close": "1464",
+        "degree": ""
+    },
+    {
+        "date": "2014-03-28",
+        "close": "1472",
+        "degree": ""
+    },
+    {
+        "date": "2014-04-04",
+        "close": "1490",
+        "degree": ""
+    },
+    {
+        "date": "2014-04-11",
+        "close": "1565",
+        "degree": ""
+    },
+    {
+        "date": "2014-04-18",
+        "close": "1521",
+        "degree": ""
+    },
+    {
+        "date": "2014-04-25",
+        "close": "1501",
+        "degree": ""
+    },
+    {
+        "date": "2014-05-09",
+        "close": "1480",
+        "degree": ""
+    },
+    {
+        "date": "2014-05-16",
+        "close": "1487",
+        "degree": ""
+    },
+    {
+        "date": "2014-05-23",
+        "close": "1484",
+        "degree": ""
+    },
+    {
+        "date": "2014-05-30",
+        "close": "1482",
+        "degree": ""
+    },
+    {
+        "date": "2014-06-06",
+        "close": "1472",
+        "degree": ""
+    },
+    {
+        "date": "2014-06-13",
+        "close": "1502",
+        "degree": ""
+    },
+    {
+        "date": "2014-06-20",
+        "close": "1484",
+        "degree": ""
+    },
+    {
+        "date": "2014-06-27",
+        "close": "1473",
+        "degree": ""
+    },
+    {
+        "date": "2014-07-04",
+        "close": "1492",
+        "degree": ""
+    },
+    {
+        "date": "2014-07-11",
+        "close": "1468",
+        "degree": ""
+    },
+    {
+        "date": "2014-07-18",
+        "close": "1478",
+        "degree": ""
+    },
+    {
+        "date": "2014-07-25",
+        "close": "1557",
+        "degree": ""
+    },
+    {
+        "date": "2014-08-01",
+        "close": "1607",
+        "degree": ""
+    },
+    {
+        "date": "2014-08-08",
+        "close": "1595",
+        "degree": ""
+    },
+    {
+        "date": "2014-08-15",
+        "close": "1612",
+        "degree": ""
+    },
+    {
+        "date": "2014-08-22",
+        "close": "1594",
+        "degree": ""
+    },
+    {
+        "date": "2014-08-29",
+        "close": "1581",
+        "degree": ""
+    },
+    {
+        "date": "2014-09-05",
+        "close": "1656",
+        "degree": ""
+    },
+    {
+        "date": "2014-09-12",
+        "close": "1630",
+        "degree": ""
+    },
+    {
+        "date": "2014-09-19",
+        "close": "1619",
+        "degree": ""
+    },
+    {
+        "date": "2014-09-26",
+        "close": "1616",
+        "degree": ""
+    },
+    {
+        "date": "2014-10-10",
+        "close": "1621",
+        "degree": ""
+    },
+    {
+        "date": "2014-10-17",
+        "close": "1608",
+        "degree": ""
+    },
+    {
+        "date": "2014-10-24",
+        "close": "1583",
+        "degree": ""
+    },
+    {
+        "date": "2014-10-31",
+        "close": "1657",
+        "degree": ""
+    },
+    {
+        "date": "2014-11-07",
+        "close": "1640",
+        "degree": ""
+    },
+    {
+        "date": "2014-11-14",
+        "close": "1728",
+        "degree": ""
+    },
+    {
+        "date": "2014-11-21",
+        "close": "1714",
+        "degree": ""
+    },
+    {
+        "date": "2014-11-28",
+        "close": "1914",
+        "degree": ""
+    },
+    {
+        "date": "2014-12-05",
+        "close": "2200",
+        "degree": ""
+    },
+    {
+        "date": "2014-12-12",
+        "close": "2193",
+        "degree": ""
+    },
+    {
+        "date": "2014-12-19",
+        "close": "2390",
+        "degree": ""
+    },
+    {
+        "date": "2014-12-26",
+        "close": "2464",
+        "degree": ""
+    },
+    {
+        "date": "2015-01-09",
+        "close": "2569",
+        "degree": ""
+    },
+    {
+        "date": "2015-01-16",
+        "close": "2653",
+        "degree": ""
+    },
+    {
+        "date": "2015-01-23",
+        "close": "2564",
+        "degree": ""
+    },
+    {
+        "date": "2015-01-30",
+        "close": "2405",
+        "degree": ""
+    },
+    {
+        "date": "2015-02-06",
+        "close": "2325",
+        "degree": ""
+    },
+    {
+        "date": "2015-02-13",
+        "close": "2427",
+        "degree": ""
+    },
+    {
+        "date": "2015-02-27",
+        "close": "2474",
+        "degree": ""
+    },
+    {
+        "date": "2015-03-06",
+        "close": "2371",
+        "degree": ""
+    },
+    {
+        "date": "2015-03-13",
+        "close": "2495",
+        "degree": ""
+    },
+    {
+        "date": "2015-03-20",
+        "close": "2680",
+        "degree": ""
+    },
+    {
+        "date": "2015-03-27",
+        "close": "2689",
+        "degree": ""
+    },
+    {
+        "date": "2015-04-03",
+        "close": "2817",
+        "degree": ""
+    },
+    {
+        "date": "2015-04-10",
+        "close": "2986",
+        "degree": ""
+    },
+    {
+        "date": "2015-04-17",
+        "close": "3235",
+        "degree": ""
+    },
+    {
+        "date": "2015-04-24",
+        "close": "3223",
+        "degree": ""
+    },
+    {
+        "date": "2015-05-08",
+        "close": "3110",
+        "degree": ""
+    },
+    {
+        "date": "2015-05-15",
+        "close": "3060",
+        "degree": ""
+    },
+    {
+        "date": "2015-05-22",
+        "close": "3248",
+        "degree": ""
+    },
+    {
+        "date": "2015-05-29",
+        "close": "3111",
+        "degree": ""
+    },
+    {
+        "date": "2015-06-05",
+        "close": "3303",
+        "degree": ""
+    },
+    {
+        "date": "2015-06-12",
+        "close": "3350",
+        "degree": ""
+    },
+    {
+        "date": "2015-06-19",
+        "close": "2903",
+        "degree": ""
+    },
+    {
+        "date": "2015-06-26",
+        "close": "2736",
+        "degree": ""
+    },
+    {
+        "date": "2015-07-03",
+        "close": "2582",
+        "degree": ""
+    },
+    {
+        "date": "2015-07-10",
+        "close": "2898",
+        "degree": ""
+    },
+    {
+        "date": "2015-07-17",
+        "close": "2807",
+        "degree": ""
+    },
+    {
+        "date": "2015-07-24",
+        "close": "2741",
+        "degree": ""
+    },
+    {
+        "date": "2015-07-31",
+        "close": "2461",
+        "degree": ""
+    },
+    {
+        "date": "2015-08-07",
+        "close": "2503",
+        "degree": ""
+    },
+    {
+        "date": "2015-08-14",
+        "close": "2577",
+        "degree": ""
+    },
+    {
+        "date": "2015-08-21",
+        "close": "2271",
+        "degree": ""
+    },
+    {
+        "date": "2015-08-28",
+        "close": "2159",
+        "degree": ""
+    },
+    {
+        "date": "2015-09-11",
+        "close": "2195",
+        "degree": ""
+    },
+    {
+        "date": "2015-09-18",
+        "close": "2198",
+        "degree": ""
+    },
+    {
+        "date": "2015-09-25",
+        "close": "2183",
+        "degree": ""
+    },
+    {
+        "date": "2015-10-09",
+        "close": "2219",
+        "degree": ""
+    },
+    {
+        "date": "2015-10-16",
+        "close": "2323",
+        "degree": ""
+    },
+    {
+        "date": "2015-10-23",
+        "close": "2343",
+        "degree": ""
+    },
+    {
+        "date": "2015-10-30",
+        "close": "2312",
+        "degree": ""
+    },
+    {
+        "date": "2015-11-06",
+        "close": "2493",
+        "degree": ""
+    },
+    {
+        "date": "2015-11-13",
+        "close": "2447",
+        "degree": ""
+    },
+    {
+        "date": "2015-11-20",
+        "close": "2466",
+        "degree": ""
+    },
+    {
+        "date": "2015-11-27",
+        "close": "2334",
+        "degree": ""
+    },
+    {
+        "date": "2015-12-04",
+        "close": "2397",
+        "degree": ""
+    },
+    {
+        "date": "2015-12-11",
+        "close": "2342",
+        "degree": ""
+    },
+    {
+        "date": "2015-12-18",
+        "close": "2422",
+        "degree": ""
+    },
+    {
+        "date": "2015-12-25",
+        "close": "2492",
+        "degree": ""
+    },
+    {
+        "date": "2016-01-08",
+        "close": "2219",
+        "degree": ""
+    },
+    {
+        "date": "2016-01-15",
+        "close": "2070",
+        "degree": ""
+    },
+    {
+        "date": "2016-01-22",
+        "close": "2061",
+        "degree": ""
+    },
+    {
+        "date": "2016-01-29",
+        "close": "1973",
+        "degree": ""
+    },
+    {
+        "date": "2016-02-05",
+        "close": "1967",
+        "degree": ""
+    },
+    {
+        "date": "2016-02-19",
+        "close": "2004",
+        "degree": ""
+    },
+    {
+        "date": "2016-02-26",
+        "close": "1955",
+        "degree": ""
+    },
+    {
+        "date": "2016-03-04",
+        "close": "2122",
+        "degree": ""
+    },
+    {
+        "date": "2016-03-11",
+        "close": "2070",
+        "degree": ""
+    },
+    {
+        "date": "2016-03-18",
+        "close": "2141",
+        "degree": ""
+    },
+    {
+        "date": "2016-03-25",
+        "close": "2149",
+        "degree": ""
+    },
+    {
+        "date": "2016-04-01",
+        "close": "2167",
+        "degree": ""
+    },
+    {
+        "date": "2016-04-08",
+        "close": "2123",
+        "degree": ""
+    },
+    {
+        "date": "2016-04-15",
+        "close": "2182",
+        "degree": ""
+    },
+    {
+        "date": "2016-04-22",
+        "close": "2157",
+        "degree": ""
+    },
+    {
+        "date": "2016-04-29",
+        "close": "2135",
+        "degree": ""
+    },
+    {
+        "date": "2016-05-06",
+        "close": "2107",
+        "degree": ""
+    },
+    {
+        "date": "2016-05-13",
+        "close": "2076",
+        "degree": ""
+    },
+    {
+        "date": "2016-05-20",
+        "close": "2083",
+        "degree": ""
+    },
+    {
+        "date": "2016-05-27",
+        "close": "2074",
+        "degree": ""
+    },
+    {
+        "date": "2016-06-03",
+        "close": "2152",
+        "degree": ""
+    },
+    {
+        "date": "2016-06-17",
+        "close": "2102",
+        "degree": ""
+    },
+    {
+        "date": "2016-06-24",
+        "close": "2076",
+        "degree": ""
+    },
+    {
+        "date": "2016-07-01",
+        "close": "2127",
+        "degree": ""
+    },
+    {
+        "date": "2016-07-08",
+        "close": "2148",
+        "degree": ""
+    },
+    {
+        "date": "2016-07-15",
+        "close": "2192",
+        "degree": ""
+    },
+    {
+        "date": "2016-07-22",
+        "close": "2157",
+        "degree": ""
+    },
+    {
+        "date": "2016-07-29",
+        "close": "2155",
+        "degree": ""
+    },
+    {
+        "date": "2016-08-05",
+        "close": "2148",
+        "degree": ""
+    },
+    {
+        "date": "2016-08-12",
+        "close": "2222",
+        "degree": ""
+    },
+    {
+        "date": "2016-08-19",
+        "close": "2249",
+        "degree": ""
+    },
+    {
+        "date": "2016-08-26",
+        "close": "2219",
+        "degree": ""
+    },
+    {
+        "date": "2016-09-02",
+        "close": "2229",
+        "degree": ""
+    },
+    {
+        "date": "2016-09-09",
+        "close": "2229",
+        "degree": ""
+    },
+    {
+        "date": "2016-09-23",
+        "close": "2196",
+        "degree": ""
+    },
+    {
+        "date": "2016-09-30",
+        "close": "2177",
+        "degree": ""
+    },
+    {
+        "date": "2016-10-14",
+        "close": "2209",
+        "degree": ""
+    },
+    {
+        "date": "2016-10-21",
+        "close": "2240",
+        "degree": ""
+    },
+    {
+        "date": "2016-10-28",
+        "close": "2253",
+        "degree": ""
+    },
+    {
+        "date": "2016-11-04",
+        "close": "2271",
+        "degree": ""
+    },
+    {
+        "date": "2016-11-11",
+        "close": "2308",
+        "degree": ""
+    },
+    {
+        "date": "2016-11-18",
+        "close": "2307",
+        "degree": ""
+    },
+    {
+        "date": "2016-11-25",
+        "close": "2393",
+        "degree": ""
+    },
+    {
+        "date": "2016-12-02",
+        "close": "2416",
+        "degree": ""
+    },
+    {
+        "date": "2016-12-09",
+        "close": "2411",
+        "degree": ""
+    },
+    {
+        "date": "2016-12-16",
+        "close": "2302",
+        "degree": ""
+    },
+    {
+        "date": "2016-12-23",
+        "close": "2278",
+        "degree": ""
+    },
+    {
+        "date": "2016-12-30",
+        "close": "2286",
+        "degree": ""
+    },
+    {
+        "date": "2017-01-06",
+        "close": "2308",
+        "degree": ""
+    },
+    {
+        "date": "2017-01-13",
+        "close": "2308",
+        "degree": ""
+    },
+    {
+        "date": "2017-01-20",
+        "close": "2347",
+        "degree": ""
+    },
+    {
+        "date": "2017-02-03",
+        "close": "2339",
+        "degree": ""
+    },
+    {
+        "date": "2017-02-10",
+        "close": "2368",
+        "degree": ""
+    },
+    {
+        "date": "2017-02-17",
+        "close": "2362",
+        "degree": ""
+    },
+    {
+        "date": "2017-02-24",
+        "close": "2389",
+        "degree": ""
+    },
+    {
+        "date": "2017-03-03",
+        "close": "2347",
+        "degree": ""
+    },
+    {
+        "date": "2017-03-10",
+        "close": "2339",
+        "degree": ""
+    },
+    {
+        "date": "2017-03-17",
+        "close": "2346",
+        "degree": ""
+    },
+    {
+        "date": "2017-03-24",
+        "close": "2365",
+        "degree": ""
+    },
+    {
+        "date": "2017-03-31",
+        "close": "2359",
+        "degree": "30"
+    },
+    {
+        "date": "2017-04-07",
+        "close": "2388",
+        "degree": "33"
+    },
+    {
+        "date": "2017-04-14",
+        "close": "2355",
+        "degree": "29"
+    },
+    {
+        "date": "2017-04-21",
+        "close": "2347",
+        "degree": "28"
+    },
+    {
+        "date": "2017-04-28",
+        "close": "2347",
+        "degree": "22"
+    },
+    {
+        "date": "2017-05-05",
+        "close": "2320",
+        "degree": "17"
+    },
+    {
+        "date": "2017-05-12",
+        "close": "2375",
+        "degree": "22"
+    },
+    {
+        "date": "2017-05-19",
+        "close": "2361",
+        "degree": "20"
+    },
+    {
+        "date": "2017-05-26",
+        "close": "2471",
+        "degree": "34"
+    },
+    {
+        "date": "2017-06-02",
+        "close": "2475",
+        "degree": "34"
+    },
+    {
+        "date": "2017-06-09",
+        "close": "2519",
+        "degree": "38"
+    },
+    {
+        "date": "2017-06-16",
+        "close": "2452",
+        "degree": "34"
+    },
+    {
+        "date": "2017-06-23",
+        "close": "2529",
+        "degree": "40"
+    },
+    {
+        "date": "2017-06-30",
+        "close": "2549",
+        "degree": "41"
+    },
+    {
+        "date": "2017-07-07",
+        "close": "2543",
+        "degree": "41"
+    },
+    {
+        "date": "2017-07-14",
+        "close": "2622",
+        "degree": "45"
+    },
+    {
+        "date": "2017-07-21",
+        "close": "2639",
+        "degree": "46"
+    },
+    {
+        "date": "2017-07-28",
+        "close": "2636",
+        "degree": "46"
+    },
+    {
+        "date": "2017-08-04",
+        "close": "2627",
+        "degree": "45"
+    },
+    {
+        "date": "2017-08-11",
+        "close": "2570",
+        "degree": "43"
+    },
+    {
+        "date": "2017-08-18",
+        "close": "2613",
+        "degree": "45"
+    },
+    {
+        "date": "2017-08-25",
+        "close": "2706",
+        "degree": "50"
+    },
+    {
+        "date": "2017-09-01",
+        "close": "2710",
+        "degree": "49"
+    },
+    {
+        "date": "2017-09-08",
+        "close": "2686",
+        "degree": "47"
+    },
+    {
+        "date": "2017-09-15",
+        "close": "2668",
+        "degree": "46"
+    },
+    {
+        "date": "2017-09-22",
+        "close": "2679",
+        "degree": "47"
+    },
+    {
+        "date": "2017-09-29",
+        "close": "2672",
+        "degree": "47"
+    },
+    {
+        "date": "2017-10-13",
+        "close": "2713",
+        "degree": "50"
+    },
+    {
+        "date": "2017-10-20",
+        "close": "2737",
+        "degree": "51"
+    },
+    {
+        "date": "2017-10-27",
+        "close": "2814",
+        "degree": "55"
+    },
+    {
+        "date": "2017-11-03",
+        "close": "2800",
+        "degree": "49"
+    },
+    {
+        "date": "2017-11-10",
+        "close": "2862",
+        "degree": "53"
+    },
+    {
+        "date": "2017-11-17",
+        "close": "2938",
+        "degree": "57"
+    },
+    {
+        "date": "2017-11-24",
+        "close": "2936",
+        "degree": "57"
+    },
+    {
+        "date": "2017-12-01",
+        "close": "2842",
+        "degree": "51"
+    },
+    {
+        "date": "2017-12-08",
+        "close": "2865",
+        "degree": "53"
+    },
+    {
+        "date": "2017-12-15",
+        "close": "2820",
+        "degree": "51"
+    },
+    {
+        "date": "2017-12-22",
+        "close": "2880",
+        "degree": "54"
+    },
+    {
+        "date": "2017-12-29",
+        "close": "2860",
+        "degree": "52"
+    },
+    {
+        "date": "2018-01-05",
+        "close": "2932",
+        "degree": "56"
+    },
+    {
+        "date": "2018-01-12",
+        "close": "3018",
+        "degree": "61"
+    },
+    {
+        "date": "2018-01-19",
+        "close": "3117",
+        "degree": "64"
+    },
+    {
+        "date": "2018-01-26",
+        "close": "3172",
+        "degree": "65"
+    },
+    {
+        "date": "2018-02-02",
+        "close": "3149",
+        "degree": "65"
+    },
+    {
+        "date": "2018-02-09",
+        "close": "2810",
+        "degree": "45"
+    },
+    {
+        "date": "2018-02-23",
+        "close": "2957",
+        "degree": "56"
+    },
+    {
+        "date": "2018-03-02",
+        "close": "2864",
+        "degree": "49"
+    },
+    {
+        "date": "2018-03-09",
+        "close": "2908",
+        "degree": "52"
+    },
+    {
+        "date": "2018-03-16",
+        "close": "2870",
+        "degree": "50"
+    },
+    {
+        "date": "2018-03-23",
+        "close": "2791",
+        "degree": "43"
+    },
+    {
+        "date": "2018-03-30",
+        "close": "2722",
+        "degree": "39"
+    },
+    {
+        "date": "2018-04-13",
+        "close": "2726",
+        "degree": "40"
+    },
+    {
+        "date": "2018-04-20",
+        "close": "2647",
+        "degree": "33"
+    },
+    {
+        "date": "2018-04-27",
+        "close": "2653",
+        "degree": "30"
+    },
+    {
+        "date": "2018-05-04",
+        "close": "2646",
+        "degree": "25"
+    },
+    {
+        "date": "2018-05-11",
+        "close": "2724",
+        "degree": "34"
+    },
+    {
+        "date": "2018-05-18",
+        "close": "2740",
+        "degree": "36"
+    },
+    {
+        "date": "2018-05-25",
+        "close": "2661",
+        "degree": "28"
+    },
+    {
+        "date": "2018-06-01",
+        "close": "2647",
+        "degree": "26"
+    },
+    {
+        "date": "2018-06-08",
+        "close": "2652",
+        "degree": "29"
+    },
+    {
+        "date": "2018-06-15",
+        "close": "2667",
+        "degree": "33"
+    },
+    {
+        "date": "2018-06-22",
+        "close": "2583",
+        "degree": "21"
+    },
+    {
+        "date": "2018-06-29",
+        "close": "2479",
+        "degree": "29"
+    },
+    {
+        "date": "2018-07-06",
+        "close": "2402",
+        "degree": "22"
+    },
+    {
+        "date": "2018-07-13",
+        "close": "2476",
+        "degree": "33"
+    },
+    {
+        "date": "2018-07-20",
+        "close": "2493",
+        "degree": "38"
+    },
+    {
+        "date": "2018-07-27",
+        "close": "2525",
+        "degree": "41"
+    },
+    {
+        "date": "2018-08-03",
+        "close": "2413",
+        "degree": "24"
+    },
+    {
+        "date": "2018-08-10",
+        "close": "2503",
+        "degree": "37"
+    },
+    {
+        "date": "2018-08-17",
+        "close": "2374",
+        "degree": "19"
+    },
+    {
+        "date": "2018-08-24",
+        "close": "2471",
+        "degree": "30"
+    },
+    {
+        "date": "2018-08-31",
+        "close": "2474",
+        "degree": "24"
+    },
+    {
+        "date": "2018-09-07",
+        "close": "2437",
+        "degree": "20"
+    },
+    {
+        "date": "2018-09-14",
+        "close": "2425",
+        "degree": "20"
+    },
+    {
+        "date": "2018-09-21",
+        "close": "2573",
+        "degree": "41"
+    },
+    {
+        "date": "2018-09-28",
+        "close": "2606",
+        "degree": "43"
+    },
+    {
+        "date": "2018-10-12",
+        "close": "2444",
+        "degree": "21"
+    },
+    {
+        "date": "2018-10-19",
+        "close": "2446",
+        "degree": "21"
+    },
+    {
+        "date": "2018-10-26",
+        "close": "2468",
+        "degree": "24"
+    },
+    {
+        "date": "2018-11-02",
+        "close": "2542",
+        "degree": "21"
+    },
+    {
+        "date": "2018-11-09",
+        "close": "2434",
+        "degree": "13"
+    },
+    {
+        "date": "2018-11-16",
+        "close": "2461",
+        "degree": "16"
+    },
+    {
+        "date": "2018-11-23",
+        "close": "2399",
+        "degree": "10"
+    },
+    {
+        "date": "2018-11-30",
+        "close": "2428",
+        "degree": "13"
+    },
+    {
+        "date": "2018-12-07",
+        "close": "2430",
+        "degree": "13"
+    },
+    {
+        "date": "2018-12-14",
+        "close": "2423",
+        "degree": "14"
+    },
+    {
+        "date": "2018-12-21",
+        "close": "2306",
+        "degree": "4"
+    },
+    {
+        "date": "2018-12-28",
+        "close": "2293",
+        "degree": "6"
+    },
+    {
+        "date": "2019-01-04",
+        "close": "2314",
+        "degree": "7"
+    },
+    {
+        "date": "2019-01-11",
+        "close": "2354",
+        "degree": "12"
+    },
+    {
+        "date": "2019-01-18",
+        "close": "2417",
+        "degree": "17"
+    },
+    {
+        "date": "2019-01-25",
+        "close": "2441",
+        "degree": "19"
+    },
+    {
+        "date": "2019-02-01",
+        "close": "2499",
+        "degree": "23"
+    },
+    {
+        "date": "2019-02-15",
+        "close": "2517",
+        "degree": "25"
+    },
+    {
+        "date": "2019-02-22",
+        "close": "2623",
+        "degree": "41"
+    },
+    {
+        "date": "2019-03-01",
+        "close": "2819",
+        "degree": "56"
+    },
+    {
+        "date": "2019-03-08",
+        "close": "2685",
+        "degree": "48"
+    },
+    {
+        "date": "2019-03-15",
+        "close": "2755",
+        "degree": "52"
+    },
+    {
+        "date": "2019-03-22",
+        "close": "2795",
+        "degree": "54"
+    },
+    {
+        "date": "2019-03-29",
+        "close": "2838",
+        "degree": "57"
+    },
+    {
+        "date": "2019-04-12",
+        "close": "2920",
+        "degree": "63"
+    },
+    {
+        "date": "2019-04-19",
+        "close": "3042",
+        "degree": "72"
+    },
+    {
+        "date": "2019-04-26",
+        "close": "2892",
+        "degree": "59"
+    },
+    {
+        "date": "2019-05-10",
+        "close": "2793",
+        "degree": "44"
+    },
+    {
+        "date": "2019-05-17",
+        "close": "2735",
+        "degree": "36"
+    },
+    {
+        "date": "2019-05-24",
+        "close": "2702",
+        "degree": "33"
+    },
+    {
+        "date": "2019-05-31",
+        "close": "2728",
+        "degree": "38"
+    },
+    {
+        "date": "2019-06-14",
+        "close": "2785",
+        "degree": "47"
+    },
+    {
+        "date": "2019-06-21",
+        "close": "2938",
+        "degree": "58"
+    },
+    {
+        "date": "2019-06-28",
+        "close": "2930",
+        "degree": "64"
+    },
+    {
+        "date": "2019-07-05",
+        "close": "2961",
+        "degree": "68"
+    },
+    {
+        "date": "2019-07-12",
+        "close": "2902",
+        "degree": "65"
+    },
+    {
+        "date": "2019-07-19",
+        "close": "2895",
+        "degree": "64"
+    },
+    {
+        "date": "2019-07-26",
+        "close": "2939",
+        "degree": "68"
+    },
+    {
+        "date": "2019-08-02",
+        "close": "2843",
+        "degree": "58"
+    },
+    {
+        "date": "2019-08-09",
+        "close": "2772",
+        "degree": "54"
+    },
+    {
+        "date": "2019-08-16",
+        "close": "2824",
+        "degree": "56"
+    },
+    {
+        "date": "2019-08-23",
+        "close": "2917",
+        "degree": "63"
+    },
+    {
+        "date": "2019-08-30",
+        "close": "2872",
+        "degree": "58"
+    },
+    {
+        "date": "2019-09-06",
+        "close": "2981",
+        "degree": "69"
+    },
+    {
+        "date": "2019-09-20",
+        "close": "2963",
+        "degree": "68"
+    },
+    {
+        "date": "2019-09-27",
+        "close": "2929",
+        "degree": "63"
+    },
+    {
+        "date": "2019-10-11",
+        "close": "2983",
+        "degree": "70"
+    },
+    {
+        "date": "2019-10-18",
+        "close": "2963",
+        "degree": "68"
+    },
+    {
+        "date": "2019-10-25",
+        "close": "2967",
+        "degree": "65"
+    },
+    {
+        "date": "2019-11-01",
+        "close": "3002",
+        "degree": "58"
+    },
+    {
+        "date": "2019-11-08",
+        "close": "3012",
+        "degree": "59"
+    },
+    {
+        "date": "2019-11-15",
+        "close": "2954",
+        "degree": "55"
+    },
+    {
+        "date": "2019-11-22",
+        "close": "2922",
+        "degree": "53"
+    },
+    {
+        "date": "2019-11-29",
+        "close": "2894",
+        "degree": "51"
+    },
+    {
+        "date": "2019-12-06",
+        "close": "2939",
+        "degree": "54"
+    },
+    {
+        "date": "2019-12-13",
+        "close": "3006",
+        "degree": "60"
+    },
+    {
+        "date": "2019-12-20",
+        "close": "3012",
+        "degree": "60"
+    },
+    {
+        "date": "2019-12-27",
+        "close": "3017",
+        "degree": "61"
+    },
+    {
+        "date": "2020-01-03",
+        "close": "3078",
+        "degree": "81"
+    },
+    {
+        "date": "2020-01-10",
+        "close": "3067",
+        "degree": "79"
+    },
+    {
+        "date": "2020-01-17",
+        "close": "3053",
+        "degree": "78"
+    },
+    {
+        "date": "2020-02-07",
+        "close": "2851",
+        "degree": "56"
+    },
+    {
+        "date": "2020-02-14",
+        "close": "2895",
+        "degree": "60"
+    },
+    {
+        "date": "2020-02-21",
+        "close": "2968",
+        "degree": "65"
+    },
+    {
+        "date": "2020-02-28",
+        "close": "2821",
+        "degree": "52"
+    },
+    {
+        "date": "2020-03-06",
+        "close": "2964",
+        "degree": "65"
+    },
+    {
+        "date": "2020-03-13",
+        "close": "2798",
+        "degree": "50"
+    },
+    {
+        "date": "2020-03-20",
+        "close": "2628",
+        "degree": "26"
+    },
+    {
+        "date": "2020-03-27",
+        "close": "2701",
+        "degree": "38"
+    },
+    {
+        "date": "2020-04-03",
+        "close": "2708",
+        "degree": "39"
+    },
+    {
+        "date": "2020-04-10",
+        "close": "2749",
+        "degree": "42"
+    },
+    {
+        "date": "2020-04-17",
+        "close": "2809",
+        "degree": "50"
+    },
+    {
+        "date": "2020-04-24",
+        "close": "2776",
+        "degree": "44"
+    },
+    {
+        "date": "2020-05-08",
+        "close": "2873",
+        "degree": "48"
+    },
+    {
+        "date": "2020-05-15",
+        "close": "2819",
+        "degree": "40"
+    },
+    {
+        "date": "2020-05-22",
+        "close": "2775",
+        "degree": "33"
+    },
+    {
+        "date": "2020-05-29",
+        "close": "2806",
+        "degree": "38"
+    },
+    {
+        "date": "2020-06-05",
+        "close": "2896",
+        "degree": "51"
+    },
+    {
+        "date": "2020-06-12",
+        "close": "2884",
+        "degree": "51"
+    },
+    {
+        "date": "2020-06-19",
+        "close": "2925",
+        "degree": "53"
+    },
+    {
+        "date": "2020-07-03",
+        "close": "3159",
+        "degree": "89"
+    },
+    {
+        "date": "2020-07-10",
+        "close": "3351",
+        "degree": "92"
+    },
+    {
+        "date": "2020-07-17",
+        "close": "3185",
+        "degree": "90"
+    },
+    {
+        "date": "2020-07-24",
+        "close": "3158",
+        "degree": "89"
+    },
+    {
+        "date": "2020-07-31",
+        "close": "3249",
+        "degree": "90"
+    },
+    {
+        "date": "2020-08-07",
+        "close": "3263",
+        "degree": "90"
+    },
+    {
+        "date": "2020-08-14",
+        "close": "3288",
+        "degree": "91"
+    },
+    {
+        "date": "2020-08-21",
+        "close": "3284",
+        "degree": "90"
+    },
+    {
+        "date": "2020-08-28",
+        "close": "3368",
+        "degree": "92"
+    },
+    {
+        "date": "2020-09-04",
+        "close": "3309",
+        "degree": "90"
+    },
+    {
+        "date": "2020-09-11",
+        "close": "3265",
+        "degree": "88"
+    },
+    {
+        "date": "2020-09-18",
+        "close": "3347",
+        "degree": "91"
+    },
+    {
+        "date": "2020-09-25",
+        "close": "3229",
+        "degree": "88"
+    },
+    {
+        "date": "2020-10-09",
+        "close": "3286",
+        "degree": "89"
+    },
+    {
+        "date": "2020-10-16",
+        "close": "3380",
+        "degree": "92"
+    },
+    {
+        "date": "2020-10-23",
+        "close": "3346",
+        "degree": "90"
+    },
+    {
+        "date": "2020-10-30",
+        "close": "3280",
+        "degree": "86"
+    },
+    {
+        "date": "2020-11-06",
+        "close": "3359",
+        "degree": "87"
+    },
+    {
+        "date": "2020-11-13",
+        "close": "3338",
+        "degree": "86"
+    },
+    {
+        "date": "2020-11-20",
+        "close": "3411",
+        "degree": "89"
+    },
+    {
+        "date": "2020-11-27",
+        "close": "3498",
+        "degree": "92"
+    },
+    {
+        "date": "2020-12-04",
+        "close": "3541",
+        "degree": "93"
+    },
+    {
+        "date": "2020-12-11",
+        "close": "3427",
+        "degree": "89"
+    },
+    {
+        "date": "2020-12-18",
+        "close": "3507",
+        "degree": "92"
+    },
+    {
+        "date": "2020-12-25",
+        "close": "3512",
+        "degree": "92"
+    },
+    {
+        "date": "2021-01-08",
+        "close": "3788",
+        "degree": "98"
+    },
+    {
+        "date": "2021-01-15",
+        "close": "3817",
+        "degree": "98"
+    },
+    {
+        "date": "2021-01-22",
+        "close": "3846",
+        "degree": "98"
+    },
+    {
+        "date": "2021-01-29",
+        "close": "3713",
+        "degree": "97"
+    },
+    {
+        "date": "2021-02-05",
+        "close": "3840",
+        "degree": "97"
+    },
+    {
+        "date": "2021-02-19",
+        "close": "4014",
+        "degree": "99"
+    },
+    {
+        "date": "2021-02-26",
+        "close": "3756",
+        "degree": "96"
+    },
+    {
+        "date": "2021-03-05",
+        "close": "3688",
+        "degree": "95"
+    },
+    {
+        "date": "2021-03-12",
+        "close": "3632",
+        "degree": "95"
+    },
+    {
+        "date": "2021-03-19",
+        "close": "3512",
+        "degree": "94"
+    },
+    {
+        "date": "2021-03-26",
+        "close": "3529",
+        "degree": "94"
+    },
+    {
+        "date": "2021-04-02",
+        "close": "3616",
+        "degree": "94"
+    },
+    {
+        "date": "2021-04-09",
+        "close": "3514",
+        "degree": "93"
+    },
+    {
+        "date": "2021-04-16",
+        "close": "3448",
+        "degree": "92"
+    },
+    {
+        "date": "2021-04-23",
+        "close": "3524",
+        "degree": "93"
+    },
+    {
+        "date": "2021-04-30",
+        "close": "3491",
+        "degree": "91"
+    },
+    {
+        "date": "2021-05-07",
+        "close": "3406",
+        "degree": "90"
+    },
+    {
+        "date": "2021-05-14",
+        "close": "3503",
+        "degree": "91"
+    },
+    {
+        "date": "2021-05-21",
+        "close": "3481",
+        "degree": "91"
+    },
+    {
+        "date": "2021-05-28",
+        "close": "3659",
+        "degree": "93"
+    },
+    {
+        "date": "2021-06-04",
+        "close": "3612",
+        "degree": "92"
+    },
+    {
+        "date": "2021-06-11",
+        "close": "3576",
+        "degree": "91"
+    },
+    {
+        "date": "2021-06-18",
+        "close": "3454",
+        "degree": "89"
+    },
+    {
+        "date": "2021-06-25",
+        "close": "3535",
+        "degree": "90"
+    },
+    {
+        "date": "2021-07-02",
+        "close": "3408",
+        "degree": "95"
+    },
+    {
+        "date": "2021-07-09",
+        "close": "3361",
+        "degree": "94"
+    },
+    {
+        "date": "2021-07-16",
+        "close": "3369",
+        "degree": "94"
+    },
+    {
+        "date": "2021-07-23",
+        "close": "3357",
+        "degree": "94"
+    },
+    {
+        "date": "2021-07-30",
+        "close": "3132",
+        "degree": "90"
+    },
+    {
+        "date": "2021-08-06",
+        "close": "3195",
+        "degree": "90"
+    },
+    {
+        "date": "2021-08-13",
+        "close": "3217",
+        "degree": "91"
+    },
+    {
+        "date": "2021-08-20",
+        "close": "3072",
+        "degree": "87"
+    },
+    {
+        "date": "2021-08-27",
+        "close": "3123",
+        "degree": "87"
+    },
+    {
+        "date": "2021-09-03",
+        "close": "3175",
+        "degree": "87"
+    },
+    {
+        "date": "2021-09-10",
+        "close": "3252",
+        "degree": "89"
+    },
+    {
+        "date": "2021-09-17",
+        "close": "3161",
+        "degree": "87"
+    },
+    {
+        "date": "2021-09-24",
+        "close": "3145",
+        "degree": "86"
+    },
+    {
+        "date": "2021-10-08",
+        "close": "3256",
+        "degree": "89"
+    },
+    {
+        "date": "2021-10-15",
+        "close": "3294",
+        "degree": "90"
+    },
+    {
+        "date": "2021-10-22",
+        "close": "3318",
+        "degree": "91"
+    },
+    {
+        "date": "2021-10-29",
+        "close": "3267",
+        "degree": "87"
+    },
+    {
+        "date": "2021-11-05",
+        "close": "3201",
+        "degree": "84"
+    },
+    {
+        "date": "2021-11-12",
+        "close": "3220",
+        "degree": "85"
+    },
+    {
+        "date": "2021-11-19",
+        "close": "3212",
+        "degree": "84"
+    },
+    {
+        "date": "2021-11-26",
+        "close": "3187",
+        "degree": "83"
+    },
+    {
+        "date": "2021-12-03",
+        "close": "3221",
+        "degree": "84"
+    },
+    {
+        "date": "2021-12-10",
+        "close": "3353",
+        "degree": "89"
+    },
+    {
+        "date": "2021-12-17",
+        "close": "3278",
+        "degree": "85"
+    },
+    {
+        "date": "2021-12-24",
+        "close": "3290",
+        "degree": "86"
+    },
+    {
+        "date": "2021-12-31",
+        "close": "3274",
+        "degree": "94"
+    },
+    {
+        "date": "2022-01-07",
+        "close": "3223",
+        "degree": "93"
+    },
+    {
+        "date": "2022-01-14",
+        "close": "3139",
+        "degree": "89"
+    },
+    {
+        "date": "2022-01-21",
+        "close": "3218",
+        "degree": "91"
+    },
+    {
+        "date": "2022-01-28",
+        "close": "3054",
+        "degree": "85"
+    },
+    {
+        "date": "2022-02-11",
+        "close": "3142",
+        "degree": "88"
+    },
+    {
+        "date": "2022-02-18",
+        "close": "3162",
+        "degree": "89"
+    },
+    {
+        "date": "2022-02-25",
+        "close": "3075",
+        "degree": "85"
+    },
+    {
+        "date": "2022-03-04",
+        "close": "3062",
+        "degree": "84"
+    },
+    {
+        "date": "2022-03-11",
+        "close": "2935",
+        "degree": "79"
+    },
+    {
+        "date": "2022-03-18",
+        "close": "2913",
+        "degree": "78"
+    },
+    {
+        "date": "2022-03-25",
+        "close": "2856",
+        "degree": "76"
+    },
+    {
+        "date": "2022-04-01",
+        "close": "2943",
+        "degree": "78"
+    },
+    {
+        "date": "2022-04-08",
+        "close": "2925",
+        "degree": "77"
+    },
+    {
+        "date": "2022-04-15",
+        "close": "2930",
+        "degree": "77"
+    },
+    {
+        "date": "2022-04-22",
+        "close": "2814",
+        "degree": "70"
+    },
+    {
+        "date": "2022-04-29",
+        "close": "2805",
+        "degree": "68"
+    },
+    {
+        "date": "2022-05-06",
+        "close": "2719",
+        "degree": "65"
+    },
+    {
+        "date": "2022-05-13",
+        "close": "2748",
+        "degree": "66"
+    },
+    {
+        "date": "2022-05-20",
+        "close": "2807",
+        "degree": "67"
+    },
+    {
+        "date": "2022-05-27",
+        "close": "2763",
+        "degree": "66"
+    },
+    {
+        "date": "2022-06-10",
+        "close": "2899",
+        "degree": "69"
+    },
+    {
+        "date": "2022-06-17",
+        "close": "2936",
+        "degree": "70"
+    },
+    {
+        "date": "2022-06-24",
+        "close": "2974",
+        "degree": "74"
+    },
+    {
+        "date": "2022-07-01",
+        "close": "3045",
+        "degree": "91"
+    },
+    {
+        "date": "2022-07-08",
+        "close": "2993",
+        "degree": "89"
+    },
+    {
+        "date": "2022-07-15",
+        "close": "2839",
+        "degree": "83"
+    },
+    {
+        "date": "2022-07-22",
+        "close": "2848",
+        "degree": "83"
+    },
+    {
+        "date": "2022-07-29",
+        "close": "2792",
+        "degree": "80"
+    },
+    {
+        "date": "2022-08-05",
+        "close": "2774",
+        "degree": "79"
+    },
+    {
+        "date": "2022-08-12",
+        "close": "2796",
+        "degree": "80"
+    },
+    {
+        "date": "2022-08-19",
+        "close": "2750",
+        "degree": "77"
+    },
+    {
+        "date": "2022-08-26",
+        "close": "2751",
+        "degree": "76"
+    },
+    {
+        "date": "2022-09-02",
+        "close": "2711",
+        "degree": "70"
+    },
+    {
+        "date": "2022-09-09",
+        "close": "2757",
+        "degree": "73"
+    },
+    {
+        "date": "2022-09-16",
+        "close": "2678",
+        "degree": "67"
+    },
+    {
+        "date": "2022-09-23",
+        "close": "2629",
+        "degree": "65"
+    },
+    {
+        "date": "2022-09-30",
+        "close": "2610",
+        "degree": "64"
+    },
+    {
+        "date": "2022-10-14",
+        "close": "2584",
+        "degree": "64"
+    },
+    {
+        "date": "2022-10-21",
+        "close": "2487",
+        "degree": "59"
+    },
+    {
+        "date": "2022-10-28",
+        "close": "2326",
+        "degree": "41"
+    },
+    {
+        "date": "2022-11-04",
+        "close": "2468",
+        "degree": "50"
+    },
+    {
+        "date": "2022-11-11",
+        "close": "2518",
+        "degree": "56"
+    },
+    {
+        "date": "2022-11-18",
+        "close": "2546",
+        "degree": "58"
+    },
+    {
+        "date": "2022-11-25",
+        "close": "2544",
+        "degree": "58"
+    },
+    {
+        "date": "2022-12-02",
+        "close": "2614",
+        "degree": "62"
+    },
+    {
+        "date": "2022-12-09",
+        "close": "2706",
+        "degree": "65"
+    },
+    {
+        "date": "2022-12-16",
+        "close": "2688",
+        "degree": "65"
+    },
+    {
+        "date": "2022-12-23",
+        "close": "2615",
+        "degree": "62"
+    },
+    {
+        "date": "2022-12-30",
+        "close": "2635",
+        "degree": "68"
+    },
+    {
+        "date": "2023-01-06",
+        "close": "2713",
+        "degree": "74"
+    },
+    {
+        "date": "2023-01-13",
+        "close": "2787",
+        "degree": "77"
+    },
+    {
+        "date": "2023-01-20",
+        "close": "2836",
+        "degree": "79"
+    },
+    {
+        "date": "2023-02-03",
+        "close": "2774",
+        "degree": "76"
+    },
+    {
+        "date": "2023-02-10",
+        "close": "2746",
+        "degree": "74"
+    },
+    {
+        "date": "2023-02-17",
+        "close": "2714",
+        "degree": "72"
+    },
+    {
+        "date": "2023-02-24",
+        "close": "2727",
+        "degree": "73"
+    },
+    {
+        "date": "2023-03-03",
+        "close": "2774",
+        "degree": "76"
+    },
+    {
+        "date": "2023-03-10",
+        "close": "2636",
+        "degree": "66"
+    },
+    {
+        "date": "2023-03-17",
+        "close": "2628",
+        "degree": "65"
+    },
+    {
+        "date": "2023-03-24",
+        "close": "2653",
+        "degree": "66"
+    },
+    {
+        "date": "2023-03-31",
+        "close": "2661",
+        "degree": "64"
+    },
+    {
+        "date": "2023-04-07",
+        "close": "2684",
+        "degree": "66"
+    },
+    {
+        "date": "2023-04-14",
+        "close": "2679",
+        "degree": "65"
+    },
+    {
+        "date": "2023-04-21",
+        "close": "2654",
+        "degree": "63"
+    },
+    {
+        "date": "2023-04-28",
+        "close": "2677",
+        "degree": "61"
+    },
+    {
+        "date": "2023-05-05",
+        "close": "2685",
+        "degree": "60"
+    },
+    {
+        "date": "2023-05-12",
+        "close": "2630",
+        "degree": "57"
+    },
+    {
+        "date": "2023-05-19",
+        "close": "2633",
+        "degree": "57"
+    },
+    {
+        "date": "2023-05-26",
+        "close": "2559",
+        "degree": "51"
+    },
+    {
+        "date": "2023-06-02",
+        "close": "2543",
+        "degree": "49"
+    },
+    {
+        "date": "2023-06-09",
+        "close": "2543",
+        "degree": "49"
+    },
+    {
+        "date": "2023-06-16",
+        "close": "2600",
+        "degree": "57"
+    },
+    {
+        "date": "2023-06-30",
+        "close": "2492",
+        "degree": "54"
+    },
+    {
+        "date": "2023-07-07",
+        "close": "2489",
+        "degree": "53"
+    },
+    {
+        "date": "2023-07-14",
+        "close": "2547",
+        "degree": "60"
+    },
+    {
+        "date": "2023-07-21",
+        "close": "2509",
+        "degree": "59"
+    },
+    {
+        "date": "2023-07-28",
+        "close": "2647",
+        "degree": "66"
+    },
+    {
+        "date": "2023-08-04",
+        "close": "2648",
+        "degree": "66"
+    },
+    {
+        "date": "2023-08-11",
+        "close": "2568",
+        "degree": "61"
+    },
+    {
+        "date": "2023-08-18",
+        "close": "2507",
+        "degree": "57"
+    },
+    {
+        "date": "2023-08-25",
+        "close": "2485",
+        "degree": "55"
+    },
+    {
+        "date": "2023-09-01",
+        "close": "2532",
+        "degree": "52"
+    },
+    {
+        "date": "2023-09-08",
+        "close": "2519",
+        "degree": "51"
+    },
+    {
+        "date": "2023-09-15",
+        "close": "2514",
+        "degree": "50"
+    },
+    {
+        "date": "2023-09-22",
+        "close": "2550",
+        "degree": "55"
+    },
+    {
+        "date": "2023-10-13",
+        "close": "2489",
+        "degree": "47"
+    },
+    {
+        "date": "2023-10-20",
+        "close": "2389",
+        "degree": "36"
+    },
+    {
+        "date": "2023-10-27",
+        "close": "2414",
+        "degree": "37"
+    },
+    {
+        "date": "2023-11-03",
+        "close": "2436",
+        "degree": "36"
+    },
+    {
+        "date": "2023-11-10",
+        "close": "2414",
+        "degree": "34"
+    },
+    {
+        "date": "2023-11-17",
+        "close": "2398",
+        "degree": "33"
+    },
+    {
+        "date": "2023-11-24",
+        "close": "2391",
+        "degree": "32"
+    },
+    {
+        "date": "2023-12-01",
+        "close": "2352",
+        "degree": "29"
+    },
+    {
+        "date": "2023-12-08",
+        "close": "2281",
+        "degree": "18"
+    },
+    {
+        "date": "2023-12-15",
+        "close": "2245",
+        "degree": "12"
+    },
+    {
+        "date": "2023-12-22",
+        "close": "2270",
+        "degree": "17"
+    },
+    {
+        "date": "2023-12-29",
+        "close": "2326",
+        "degree": "24"
+    },
+    {
+        "date": "2024-01-05",
+        "close": "2268",
+        "degree": "14"
+    },
+    {
+        "date": "2024-01-12",
+        "close": "2237",
+        "degree": "10"
+    },
+    {
+        "date": "2024-01-19",
+        "close": "2243",
+        "degree": "11"
+    },
+    {
+        "date": "2024-01-26",
+        "close": "2314",
+        "degree": "19"
+    },
+    {
+        "date": "2024-02-02",
+        "close": "2229",
+        "degree": "7"
+    },
+    {
+        "date": "2024-02-23",
+        "close": "2433",
+        "degree": "35"
+    },
+    {
+        "date": "2024-03-01",
+        "close": "2414",
+        "degree": "33"
+    },
+    {
+        "date": "2024-03-08",
+        "close": "2426",
+        "degree": "34"
+    },
+    {
+        "date": "2024-03-15",
+        "close": "2427",
+        "degree": "34"
+    },
+    {
+        "date": "2024-03-22",
+        "close": "2403",
+        "degree": "31"
+    },
+    {
+        "date": "2024-03-29",
+        "close": "2414",
+        "degree": "30"
+    },
+    {
+        "date": "2024-04-12",
+        "close": "2374",
+        "degree": "23"
+    },
+    {
+        "date": "2024-04-19",
+        "close": "2430",
+        "degree": "31"
+    },
+    {
+        "date": "2024-04-26",
+        "close": "2461",
+        "degree": "33"
+    },
+    {
+        "date": "2024-05-10",
+        "close": "2508",
+        "degree": "32"
+    },
+    {
+        "date": "2024-05-17",
+        "close": "2524",
+        "degree": "34"
+    },
+    {
+        "date": "2024-05-24",
+        "close": "2474",
+        "degree": "28"
+    },
+    {
+        "date": "2024-05-31",
+        "close": "2462",
+        "degree": "25"
+    },
+    {
+        "date": "2024-06-07",
+        "close": "2457",
+        "degree": "26"
+    },
+    {
+        "date": "2024-06-14",
+        "close": "2426",
+        "degree": "22"
+    },
+    {
+        "date": "2024-06-21",
+        "close": "2398",
+        "degree": "17"
+    },
+    {
+        "date": "2024-06-28",
+        "close": "2394",
+        "degree": "7"
+    },
+    {
+        "date": "2024-07-05",
+        "close": "2386",
+        "degree": "7"
+    },
+    {
+        "date": "2024-07-12",
+        "close": "2412",
+        "degree": "14"
+    },
+    {
+        "date": "2024-07-19",
+        "close": "2456",
+        "degree": "23"
+    },
+    {
+        "date": "2024-07-26",
+        "close": "2355",
+        "degree": "9"
+    },
+    {
+        "date": "2024-08-02",
+        "close": "2343",
+        "degree": "8"
+    },
+    {
+        "date": "2024-08-09",
+        "close": "2317",
+        "degree": "6"
+    },
+    {
+        "date": "2024-08-16",
+        "close": "2345",
+        "degree": "8"
+    },
+    {
+        "date": "2024-08-23",
+        "close": "2355",
+        "degree": "8"
+    },
+    {
+        "date": "2024-08-30",
+        "close": "2335",
+        "degree": "6"
+    },
+    {
+        "date": "2024-09-06",
+        "close": "2263",
+        "degree": "2"
+    },
+    {
+        "date": "2024-09-13",
+        "close": "2205",
+        "degree": "0"
+    },
+    {
+        "date": "2024-09-20",
+        "close": "2233",
+        "degree": "1"
+    },
+    {
+        "date": "2024-09-27",
+        "close": "2571",
+        "degree": "36"
+    },
+    {
+        "date": "2024-10-11",
+        "close": "2680",
+        "degree": "45"
+    },
+    {
+        "date": "2024-10-14",
+        "close": "2723",
+        "degree": "49"
+    }
+];
         const dateFormat = 'YYYY-MM-DD';
         const dateRegex = /^\d{4}-\d{2}-\d{2}/;
 
